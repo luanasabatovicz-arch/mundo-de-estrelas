@@ -1,7 +1,7 @@
 import { useState } from 'preact/hooks';
 import { db, getState, toast } from '../../core/store';
 import { APP_NAME } from '../../config';
-import { loadSeasonIndex, seasonUrl, useContent } from '../../core/content';
+import { contentUrl } from '../../core/content';
 
 const errMsg = (e: any) => {
   const c = e?.code || '';
@@ -19,12 +19,11 @@ export function Login() {
   const [mode, setMode] = useState<'start' | 'in' | 'up'>('start');
   const [email, setEmail] = useState(''); const [pass, setPass] = useState('');
   const [err, setErr] = useState(''); const [busy, setBusy] = useState(false);
-  const idx = useContent(loadSeasonIndex); const cover = idx?.find(x => x.cover);
   const [coverOk, setCoverOk] = useState(false);
   const go = async (f: () => Promise<void>) => { setErr(''); setBusy(true); try { await f() } catch (e) { setErr(errMsg(e)) } setBusy(false) };
   return (
     <div class="login">
-      {cover && <img class={'login-cover' + (coverOk ? ' on' : '')} src={seasonUrl(cover.id, cover.cover!)} alt={`${APP_NAME}: pequenas atitudes, grandes conquistas, infinitos mundos.`} onLoad={() => setCoverOk(true)} onError={() => setCoverOk(false)} />}
+      {<img class={'login-cover' + (coverOk ? ' on' : '')} src={contentUrl('capa-app.jpg')} alt={`${APP_NAME}: pequenas atitudes, grandes conquistas, infinitos mundos.`} onLoad={() => setCoverOk(true)} onError={() => setCoverOk(false)} />}
       {!coverOk && <div class="login-hero">
         <div class="brand-mark" aria-hidden="true">✦</div>
         <h1>{APP_NAME}</h1>
