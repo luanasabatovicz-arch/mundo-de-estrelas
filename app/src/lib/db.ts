@@ -6,7 +6,7 @@
  */
 import { initializeApp, type FirebaseApp } from 'firebase/app';
 import {
-  getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, signInWithEmailAndPassword,
+  getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, signInWithRedirect, signInWithEmailAndPassword,
   createUserWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, signOut, type Auth,
 } from 'firebase/auth';
 import {
@@ -63,7 +63,15 @@ export function firebaseBackend(): Backend {
   return {
     demo: false,
     onAuth: cb => onAuthStateChanged(auth, u => cb(toUser(u))),
-    signInGoogle: async () => { await signInWithPopup(auth, new GoogleAuthProvider()) },
+    signInGoogle: async () => {
+      const p = new GoogleAuthProvider(); p.setCustomParameters({ prompt: 'select_account' });
+      try { await signInWithPopup(auth, p) }
+      catch (e: any) {
+        // navegadores que bloqueiam janelas (alguns celulares e apps) entram pela própria página
+        if (/popup-blocked|operation-not-supported|web-storage-unsupported/.test(e?.code || '')) await signInWithRedirect(auth, p);
+        else throw e;
+      }
+    },
     signInEmail: async (e, p) => { await signInWithEmailAndPassword(auth, e, p) },
     signUpEmail: async (e, p) => { const c = await createUserWithEmailAndPassword(auth, e, p); await sendEmailVerification(c.user) },
     resendVerification: async () => { if (auth.currentUser) await sendEmailVerification(auth.currentUser) },

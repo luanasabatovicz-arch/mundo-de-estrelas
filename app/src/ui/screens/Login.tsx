@@ -12,6 +12,8 @@ const errMsg = (e: any) => {
   if (c.includes('popup-closed') || c.includes('cancelled-popup')) return '';
   if (c.includes('too-many-requests')) return 'Muitas tentativas. Espere alguns minutos.';
   if (c.includes('network')) return 'Sem conexão com a internet.';
+  if (c.includes('unauthorized-domain')) return 'Este endereço ainda não está autorizado no Firebase para entrar com Google.';
+  if (c.includes('popup-blocked')) return 'O navegador bloqueou a janela do Google. Permita janelas para este site e tente de novo.';
   return e?.message || String(e);
 };
 
