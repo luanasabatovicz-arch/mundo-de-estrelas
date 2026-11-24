@@ -5,7 +5,7 @@ import {
   createLicenses, deleteItem, endSeason, exportData, invite, isSuperadmin, removeChild, removeMember, renameFamily,
   reorderItems, saveChild, saveItem, saveSettings, setGoal, setPin, startSeason, uninvite,
 } from '../../core/actions';
-import { loadSeasonIndex, useContent } from '../../core/content';
+import { loadSeasonIndex, seasonUrl, useContent } from '../../core/content';
 import { ageOf, downloadText, fmtDay, shrinkPhoto } from '../../lib/util';
 import { APP_VERSION } from '../../config';
 import { Avatar, ColorPick, Confirm, EmojiPick, Field, PinPad, Sheet } from '../kit';
@@ -188,7 +188,7 @@ function SeasonAdmin({ go }: { go: (s: Sec) => void }) {
   };
   if (!run || !season) return (
     <div class="card"><h2>Temporada</h2><p>Nenhuma temporada ativa.</p>
-      {(idx || []).map(x => <div class="subcard"><b>{x.name}</b><p class="muted">{x.tagline}</p>
+      {(idx || []).map(x => <div class="subcard">{x.cover && <img class="season-cover" src={seasonUrl(x.id, x.cover)} alt="" onError={e => ((e.target as HTMLElement).style.display = 'none')} />}<b>{x.name}</b><p class="muted">{x.tagline}</p>
         <div class="row gap"><button class="btn primary sm" onClick={() => startSeason(x.id, false)}>Começar na data oficial</button><button class="btn sm" onClick={() => startSeason(x.id, true)}>Começar hoje</button></div></div>)}
     </div>
   );

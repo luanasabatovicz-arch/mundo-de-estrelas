@@ -1,7 +1,7 @@
 import { useState } from 'preact/hooks';
 import { acceptInvite, createFamily, createLicenses, isSuperadmin, type NewFamily } from '../../core/actions';
 import { db, getState, useApp } from '../../core/store';
-import { loadSeasonIndex, useContent } from '../../core/content';
+import { loadSeasonIndex, seasonUrl, useContent } from '../../core/content';
 import { ageBand, ageOf, fmtDay } from '../../lib/util';
 import { ColorPick, COLORS, Field, PinPad } from '../kit';
 import type { Gender } from '../../core/types';
@@ -121,7 +121,7 @@ function Onboarding({ onCancel }: { onCancel: () => void }) {
       {step === 4 && <div class="card">
         <h2>Primeira temporada</h2>
         {season ? <>
-          <div class="season-pick"><b>{season.name}</b><p class="muted">{season.tagline}</p></div>
+          <div class="season-pick">{season.cover && <img class="season-cover" src={seasonUrl(season.id, season.cover)} alt="" onError={e => ((e.target as HTMLElement).style.display = 'none')} />}<b>{season.name}</b><p class="muted">{season.tagline}</p></div>
           {before ? <>
             <p>Começa em {fmtDay(seasonStart)}. Até lá, a rotina e os prêmios já funcionam.</p>
             <label class="toggle"><input type="checkbox" checked={startNow} onChange={e => setStartNow((e.target as HTMLInputElement).checked)} /><span><b>Começar a vila hoje</b><small>As peças começam a ser liberadas já, uma por dia.</small></span></label>

@@ -14,7 +14,7 @@ export function loadJSON<T = any>(path: string): Promise<T> {
 export const contentUrl = (p: string) => CONTENT + p;
 export const seasonUrl = (seasonId: string, p: string) => `${CONTENT}seasons/${seasonId}/${p}`;
 
-export interface SeasonIndexEntry { id: string; name: string; tagline: string; dates: { start: string; end: string } }
+export interface SeasonIndexEntry { id: string; name: string; tagline: string; cover?: string; dates: { start: string; end: string } }
 export const loadSeasonIndex = () => loadJSON<SeasonIndexEntry[]>('seasons/index.json');
 export const loadSeason = (id: string) => loadJSON<SeasonDef>(`seasons/${id}/season.json`);
 export async function loadOverrides(id: string) {

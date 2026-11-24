@@ -5,7 +5,7 @@
   "tagline": "A cada dia, uma peça nova acende a vila.",
   "dates": { "start": "12-01", "end": "01-06" },
   "palette": { "primary": "#8E2C2C", "secondary": "#2F5D4A", "accent": "#C9A24A", "paper": "#FBF6EE", "ink": "#2A2320", "sky": "#1F2E4A" },
-  "images": { "background": "images/fundo.jpg", "cover": "images/capa.png", "final": "images/final.png" },
+  "images": { "background": "images/fundo.jpg", "cover": "images/capa.jpg", "final": "images/final.png" },
   "scene": { "w": 1024, "h": 1536 },
   "milestoneFractions": [0.12, 0.3, 0.5, 0.75, 1.0],
   "items": [
