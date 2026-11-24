@@ -18,7 +18,7 @@ App para famílias com crianças e adolescentes: rotina, atitudes e prêmios com
 
 Envie cada imagem com o nome exato para a pasta indicada no guia das ilustrações. Enquanto uma imagem não existe, o app mostra o emoji da peça. Em Responsáveis → Temporada → Conferir imagens dá para ver o que já chegou.
 
-- Vila: `docs/content/seasons/vila-natal/images/` (`fundo.png`, `capa.png`, `pecas/01-pinheiro.png` …, `marcos/m1-torre-relogio.png` …)
+- Vila: `docs/content/seasons/vila-natal/images/` (`fundo.jpg`, `capa.png`, `pecas/01-pinheiro.png` …, `marcos/m1-torre-relogio.png` …)
 - Histórias da noite: `docs/content/noite/natal/01-1.jpg` … `37-3.jpg`
 - Advento: `docs/content/advento/01.jpg` … `24.jpg`
 
