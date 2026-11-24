@@ -1,0 +1,133 @@
+{
+  "nota": "Mensagens da noite por tom do dia (otimo, bom, recomeco, dificil) e nível (p até 6 anos, m 7 a 11, g 12+). {nome} vira o nome da criança; {o|a} muda com o gênero. As versões neutro_ são usadas quando o módulo cristão está desligado.",
+  "otimo": {
+    "p": [
+      "{nome}, hoje você brilhou igual estrela! Eu fiquei sorrindo o dia inteiro olhando para você. (Sofonias 3:17)",
+      "Que dia bonito, {nome}! Você ajudou, obedeceu e foi carinhos{o|a}. Eu te amo muito, muito. (1 João 4:19)",
+      "Suas mãozinhas trabalharam bastante hoje. Agora é hora de descansar no meu colo. (Salmo 4:8)",
+      "Eu vi tudo de bom que você fez hoje e guardei no meu coração. Dorme feliz! (Mateus 6:4)",
+      "{nome}, você fez a sua família sorrir hoje. Isso é um presente para mim também. (Provérbios 23:24)",
+      "Você é um tesouro, {nome}. Hoje deu para ver o quanto você tem um coração bom. (Salmo 139:14)",
+      "Dia completo! Até os anjos bateram palmas. Boa noite, meu bem. (Lucas 15:10)",
+      "Obrigado por cada sim que você disse hoje. Eu estou sempre pertinho de você. (Isaías 41:10)"
+    ],
+    "m": [
+      "{nome}, hoje você fez o que precisava sem ninguém ter que insistir. Isso é responsabilidade, e eu me alegro com você. (Colossenses 3:23)",
+      "Você cumpriu sua rotina e ainda teve atitudes bonitas. É assim que se constrói um caráter forte. (Lucas 2:52)",
+      "Eu reparei no seu esforço hoje, mesmo nas coisas pequenas. Quem é fiel no pouco é fiel no muito. (Lucas 16:10)",
+      "Que orgulho de você, {nome}. Seu exemplo ajuda a casa inteira a ficar mais leve. (Mateus 5:16)",
+      "Hoje você escolheu fazer o certo várias vezes. Cada escolha dessas é uma semente boa. (Gálatas 6:9)",
+      "Você foi gentil e cuidadoso hoje. O amor aparece justamente nessas atitudes. (1 Coríntios 13:4)",
+      "Dia muito bem vivido! Descansa, porque amanhã tem mais aventura e eu vou junto. (Salmo 121:8)",
+      "{nome}, a alegria que você espalhou hoje voltou para você. Boa noite. (Provérbios 11:25)"
+    ],
+    "g": [
+      "{nome}, hoje deu para ver maturidade: você fez sua parte sem precisar de cobrança. Isso diz muito sobre quem você está se tornando. (1 Timóteo 4:12)",
+      "Você honrou sua família com suas atitudes hoje. Isso não passa despercebido, nem aqui, nem no céu. (Efésios 6:2)",
+      "Disciplina é amor ao seu futuro. Hoje você investiu nele. Descanse bem. (Hebreus 12:11)",
+      "Constância não aparece em foto, mas constrói uma vida. Hoje você foi constante. (Gálatas 6:9)",
+      "Você fez as coisas com capricho, como quem trabalha para Deus e não só para cumprir tabela. (Colossenses 3:23)",
+      "Seu dia mostrou que dá para ser firme e gentil ao mesmo tempo. Continue assim. (Miqueias 6:8)",
+      "Ser exemplo para os mais novos é uma responsabilidade bonita, e hoje você foi. (Mateus 5:16)",
+      "Fecha o dia com a consciência tranquila, {nome}. Você foi fiel no pouco. (Lucas 16:10)"
+    ]
+  },
+  "bom": {
+    "p": [
+      "Hoje teve muita coisa boa, {nome}. Amanhã a gente faz mais ainda, juntinhos. (Lamentações 3:22-23)",
+      "Você tentou, e eu vi! Cada tentativa é um passinho para frente. (Filipenses 4:13)",
+      "Boa noite, {nome}. Eu te amo do tamanho do céu, todos os dias. (Romanos 8:39)",
+      "Amanhã é um dia novinho para completar a rotina. Eu vou te ajudar. (Isaías 41:13)",
+      "Você foi bonzinh{o|a} hoje. Agora fecha os olhinhos, que eu cuido de você. (Salmo 121:4)",
+      "Que bom ter você na família, {nome}! Amanhã tem estrelinha nova esperando. (Salmo 127:3)"
+    ],
+    "m": [
+      "Foi um dia bom, {nome}. Faltou pouco para fechar a rotina; amanhã você consegue. (Filipenses 3:13-14)",
+      "Nada de dia ruim hoje, só um dia em construção. Amanhã você termina o que começou. (Filipenses 1:6)",
+      "Você teve boas atitudes. Que tal escolher uma tarefa para fazer logo cedo amanhã? (Provérbios 16:3)",
+      "Eu gosto de ver você crescendo um pouco a cada dia. Hoje foi mais um passo. (Lucas 2:52)",
+      "Descansa bem. Amanhã eu renovo as suas forças. (Isaías 40:31)",
+      "Bom dia não precisa ser perfeito. Precisa ser sincero, e o seu foi. (Salmo 51:6)"
+    ],
+    "g": [
+      "Dia bom, {nome}, mesmo sem fechar tudo. Amanhã comece pelo mais difícil e o resto flui. (Provérbios 16:3)",
+      "Você não foi perfeit{o|a}, e não precisa ser. Precisa continuar. (Filipenses 3:13-14)",
+      "Pequenos ajustes fazem grandes diferenças. Escolha um para amanhã. (Zacarias 4:10)",
+      "Seu valor não depende da pontuação do dia. Mas as suas escolhas constroem quem você vai ser. (Efésios 2:10)",
+      "Descanse sem culpa. Amanhã é outra chance, e graça não tem limite diário. (Lamentações 3:22-23)",
+      "Você está no caminho certo. Constância vence talento que não treina. (Gálatas 6:9)"
+    ]
+  },
+  "recomeco": {
+    "p": [
+      "Hoje teve uma hora difícil, mas depois você consertou! Isso me deixou muito feliz. (Lucas 15:7)",
+      "Você errou e depois fez o bem. É assim que a gente cresce, {nome}. (1 João 1:9)",
+      "Depois da arte veio o abraço de desculpas. Eu amo quando isso acontece! (Efésios 4:32)",
+      "O seu coração ficou leve de novo, né? Dorme em paz, {nome}. (Salmo 4:8)",
+      "Errar todo mundo erra. Voltar para o bem é coisa de gente corajosa. (Provérbios 24:16)",
+      "Eu continuo te amando do mesmo tamanhão. E vi que você escolheu melhorar. (Jeremias 31:3)"
+    ],
+    "m": [
+      "Hoje teve tropeço, mas você não ficou no chão. Levantou e fez o certo. Isso conta muito. (Provérbios 24:16)",
+      "Você virou o jogo depois do erro. É isso que mostra quem você é de verdade. (Romanos 12:21)",
+      "Consertar o que fez é mais difícil que só fazer certo. Você conseguiu. (Mateus 5:24)",
+      "O erro não define você, {nome}. A escolha que você fez depois diz muito mais. (2 Coríntios 5:17)",
+      "Perdão recebido, coração leve. Amanhã você começa zerad{o|a}. (Lamentações 3:22-23)",
+      "Eu não desisto de você, e fico feliz que você também não desistiu. (Filipenses 1:6)"
+    ],
+    "g": [
+      "Hoje teve um momento ruim, mas você não deixou ele definir o dia. Isso é maturidade. (Provérbios 24:16)",
+      "Reconhecer o erro e reparar exige humildade, e humildade é força. (1 Pedro 5:6)",
+      "Você assumiu o que fez. Poucas pessoas fazem isso, em qualquer idade. (Provérbios 28:13)",
+      "O que vale não é nunca cair, é o que você faz depois. Hoje você fez bem. (Miqueias 7:8)",
+      "Graça não é desculpa para errar, é força para recomeçar. Você recomeçou. (Romanos 5:20)",
+      "Amanhã não carrega a conta de hoje. Durma em paz. (Salmo 103:12)"
+    ]
+  },
+  "dificil": {
+    "p": [
+      "{nome}, hoje foi difícil, né? Mas escuta: eu continuo te amando do mesmo tamanho. Nada muda isso. (Romanos 8:38-39)",
+      "Até as florzinhas às vezes ficam murchinhas. Amanhã você floresce de novo, comigo. (Lamentações 3:22-23)",
+      "Quando a raiva vier amanhã, respira fundo e me chama. Eu te ajudo. (Salmo 46:1)",
+      "Que tal pedir desculpas antes de dormir? O coração fica levinho. (1 João 1:9)",
+      "Perder estrelinhas não faz você perder o meu amor. Nunca. (Jeremias 31:3)",
+      "Amanhã a gente tenta de novo. Eu seguro a sua mão. (Isaías 41:13)"
+    ],
+    "m": [
+      "Hoje não foi fácil, {nome}. Mas o meu amor por você não diminuiu nem um pouquinho. (Romanos 8:38-39)",
+      "Todo mundo tem dias assim. O importante é o que você vai fazer amanhã. (Filipenses 3:13-14)",
+      "Que tal conversar com alguém da família antes de dormir e acertar o que ficou pendente? (Efésios 4:26)",
+      "Você é muito mais do que os erros de hoje. Eu conheço o seu coração. (1 Samuel 16:7)",
+      "Amanhã as minhas misericórdias são novinhas. Começa de novo comigo. (Lamentações 3:22-23)",
+      "Quando ficar difícil controlar a raiva, me peça ajuda. Força eu tenho de sobra para dar. (Isaías 40:29)"
+    ],
+    "g": [
+      "Dia pesado, {nome}. Não precisa fingir que foi bom; precisa olhar com honestidade e decidir o próximo passo. (Salmo 139:23-24)",
+      "Seu valor não caiu hoje. Mas algumas escolhas precisam de reparo, e você sabe quais. (Provérbios 28:13)",
+      "Antes de dormir, vale uma conversa sincera com quem ficou chateado. Isso resolve mais que o silêncio. (Efésios 4:26)",
+      "Emoção forte não é pecado; o que fazemos com ela é que importa. Amanhã você pode escolher diferente. (Tiago 1:19-20)",
+      "Ninguém está te escrevendo como caso perdido. Muito menos Deus. (Filipenses 1:6)",
+      "Descanse. Amanhã é um recomeço de verdade, não um castigo. (Lamentações 3:22-23)"
+    ]
+  },
+  "neutro_otimo": {
+    "p": ["{nome}, hoje você brilhou igual estrela! Que dia lindo.", "Você ajudou e foi carinhos{o|a}. Que orgulho!", "Dia completo! Agora é hora de descansar bem gostoso.", "Você fez a sua família sorrir hoje. Obrigado!"],
+    "m": ["Você cumpriu sua rotina e teve atitudes bonitas. Isso é responsabilidade!", "Seu esforço apareceu hoje, até nas coisas pequenas.", "Que orgulho de você, {nome}. Seu exemplo deixa a casa mais leve.", "Dia muito bem vivido. Descansa, que amanhã tem mais."],
+    "g": ["Hoje deu para ver maturidade: você fez sua parte sem cobrança.", "Disciplina é cuidar do seu futuro. Hoje você cuidou.", "Constância constrói uma vida. Hoje você foi constante.", "Feche o dia com a consciência tranquila, {nome}."]
+  },
+  "neutro_bom": {
+    "p": ["Hoje teve muita coisa boa. Amanhã tem mais!", "Você tentou, e isso já é um passinho para frente.", "Amanhã é um dia novinho para completar a rotina.", "Boa noite, {nome}. Você é muito amad{o|a}."],
+    "m": ["Faltou pouco para fechar a rotina. Amanhã você consegue.", "Que tal escolher uma tarefa para fazer logo cedo amanhã?", "Você está crescendo um pouco a cada dia.", "Dia bom não precisa ser perfeito."],
+    "g": ["Amanhã comece pelo mais difícil e o resto flui.", "Você não precisa ser perfeit{o|a}, precisa continuar.", "Escolha um pequeno ajuste para amanhã.", "Descanse sem culpa. Amanhã é outra chance."]
+  },
+  "neutro_recomeco": {
+    "p": ["Teve uma hora difícil, mas depois você consertou. Muito bem!", "Errar todo mundo erra. Voltar para o bem é coisa de gente corajosa.", "Depois veio o pedido de desculpas. Que coração bonito!", "O coração ficou leve de novo. Dorme em paz."],
+    "m": ["Você tropeçou, mas levantou e fez o certo.", "Consertar o que fez é difícil, e você conseguiu.", "O erro não define você. A escolha depois diz muito mais.", "Amanhã você começa zerad{o|a}."],
+    "g": ["Você não deixou um momento ruim definir o dia. Isso é maturidade.", "Assumir o erro e reparar exige coragem.", "O que vale é o que você faz depois de cair.", "Amanhã não carrega a conta de hoje."]
+  },
+  "neutro_dificil": {
+    "p": ["Hoje foi difícil, né? Mas você continua sendo muito amad{o|a}.", "Amanhã a gente tenta de novo, juntinhos.", "Que tal pedir desculpas antes de dormir? O coração fica levinho.", "Quando a raiva vier, respira fundo e chama um adulto."],
+    "m": ["Todo mundo tem dias assim. O importante é o que vem amanhã.", "Que tal conversar com alguém da família antes de dormir?", "Você é muito mais do que os erros de hoje.", "Amanhã é um recomeço."],
+    "g": ["Dia pesado. Olhe com honestidade e decida o próximo passo.", "Uma conversa sincera resolve mais que o silêncio.", "Emoção forte é normal; o que fazemos com ela é que importa.", "Descanse. Amanhã é recomeço, não castigo."]
+  }
+}

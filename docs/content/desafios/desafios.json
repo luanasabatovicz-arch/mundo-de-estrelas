@@ -1,0 +1,791 @@
+{
+ "bands": [
+  "2 a 4 anos",
+  "5 a 7 anos",
+  "8 a 10 anos",
+  "11 a 13 anos",
+  "14 a 17 anos"
+ ],
+ "lists": [
+  [
+   {
+    "t": "Dar 3 abraços bem apertados",
+    "e": "🤗",
+    "s": 3
+   },
+   {
+    "t": "Dizer \"obrigad{o|a}\" 5 vezes hoje",
+    "e": "🙏",
+    "s": 3
+   },
+   {
+    "t": "Comer uma fruta inteirinha",
+    "e": "🍓",
+    "s": 3
+   },
+   {
+    "t": "Fazer um desenho de presente para alguém",
+    "e": "🖍️",
+    "s": 3
+   },
+   {
+    "t": "Ajudar a guardar as compras",
+    "e": "🛒",
+    "s": 3
+   },
+   {
+    "t": "Arrumar os sapatos da porta",
+    "e": "👟",
+    "s": 3
+   },
+   {
+    "t": "Cantar uma música para alguém da família",
+    "e": "🎤",
+    "s": 3
+   },
+   {
+    "t": "Regar uma plantinha",
+    "e": "🌱",
+    "s": 3
+   },
+   {
+    "t": "Brincar de estátua por 1 minuto",
+    "e": "🗿",
+    "s": 2
+   },
+   {
+    "t": "Contar até 20",
+    "e": "🔢",
+    "s": 3
+   },
+   {
+    "t": "Encontrar 5 coisas vermelhas na casa",
+    "e": "🔴",
+    "s": 3
+   },
+   {
+    "t": "Fazer 10 pulos de sapo",
+    "e": "🐸",
+    "s": 3
+   },
+   {
+    "t": "Escovar os dentes cantando",
+    "e": "🪥",
+    "s": 2
+   },
+   {
+    "t": "Pedir \"por favor\" toda vez hoje",
+    "e": "💛",
+    "s": 3
+   },
+   {
+    "t": "Emprestar um brinquedo sem reclamar",
+    "e": "🧸",
+    "s": 4
+   },
+   {
+    "t": "Guardar 10 brinquedos bem rapidinho",
+    "e": "🧺",
+    "s": 3
+   },
+   {
+    "t": "Dar beijo de boa noite em todo mundo",
+    "e": "😘",
+    "s": 2
+   },
+   {
+    "t": "Ajudar a dobrar as meias",
+    "e": "🧦",
+    "s": 3
+   },
+   {
+    "t": "Fazer uma careta para alguém rir",
+    "e": "🤪",
+    "s": 2
+   },
+   {
+    "t": "Comer todos os legumes do prato",
+    "e": "🥕",
+    "s": 4
+   },
+   {
+    "t": "Dançar uma música inteirinha",
+    "e": "💃",
+    "s": 2
+   },
+   {
+    "t": "Ficar 1 minuto quietinh{o|a} de olhos fechados",
+    "e": "🤫",
+    "s": 3
+   },
+   {
+    "t": "Contar uma historinha com os bonecos",
+    "e": "🎭",
+    "s": 3
+   },
+   {
+    "t": "Dizer 3 coisas que ama em alguém da família",
+    "e": "💞",
+    "s": 3
+   },
+   {
+    "t": "Montar um quebra-cabeça",
+    "e": "🧩",
+    "s": 3
+   },
+   {
+    "t": "Achar um círculo, um quadrado e um triângulo",
+    "e": "🔺",
+    "s": 3
+   },
+   {
+    "t": "Ajudar a pôr a mesa",
+    "e": "🍴",
+    "s": 3
+   },
+   {
+    "t": "Lavar as mãos sem ninguém pedir",
+    "e": "🧼",
+    "s": 3
+   },
+   {
+    "t": "Esperar a vez sem reclamar",
+    "e": "⏳",
+    "s": 4
+   },
+   {
+    "t": "Experimentar uma comida nova",
+    "e": "🥦",
+    "s": 4
+   },
+   {
+    "t": "Fazer carinho em alguém que está cansado",
+    "e": "💗",
+    "s": 3
+   }
+  ],
+  [
+   {
+    "t": "Ler um livro curtinho em voz alta",
+    "e": "📖",
+    "s": 4
+   },
+   {
+    "t": "Escrever o próprio nome completo bem caprichado",
+    "e": "✏️",
+    "s": 4
+   },
+   {
+    "t": "Fazer 20 polichinelos",
+    "e": "⭐",
+    "s": 4
+   },
+   {
+    "t": "Arrumar a mochila sozinh{o|a} para amanhã",
+    "e": "🎒",
+    "s": 4
+   },
+   {
+    "t": "Ajudar a pôr e tirar a mesa",
+    "e": "🍴",
+    "s": 4
+   },
+   {
+    "t": "Desenhar a família inteira",
+    "e": "🖍️",
+    "s": 4
+   },
+   {
+    "t": "Aprender 3 palavras novas em inglês",
+    "e": "🇬🇧",
+    "s": 4
+   },
+   {
+    "t": "Contar até 100",
+    "e": "🔢",
+    "s": 4
+   },
+   {
+    "t": "Guardar os brinquedos sem ninguém pedir",
+    "e": "🧸",
+    "s": 4
+   },
+   {
+    "t": "Fazer um cartão para alguém especial",
+    "e": "💌",
+    "s": 4
+   },
+   {
+    "t": "Elogiar 2 pessoas diferentes hoje",
+    "e": "💬",
+    "s": 4
+   },
+   {
+    "t": "Escolher uma roupa e vestir sozinh{o|a}",
+    "e": "👕",
+    "s": 3
+   },
+   {
+    "t": "Brincar 10 minutos com alguém do jeito que a pessoa quiser",
+    "e": "🤝",
+    "s": 5
+   },
+   {
+    "t": "Descobrir um bicho novo e contar no jantar",
+    "e": "🦒",
+    "s": 4
+   },
+   {
+    "t": "Dobrar as próprias roupas",
+    "e": "👚",
+    "s": 4
+   },
+   {
+    "t": "Passar a manhã sem reclamar",
+    "e": "😎",
+    "s": 5
+   },
+   {
+    "t": "Montar uma torre com 20 peças",
+    "e": "🧱",
+    "s": 3
+   },
+   {
+    "t": "Ajudar a regar as plantas",
+    "e": "🌱",
+    "s": 3
+   },
+   {
+    "t": "Fazer um avião de papel e ver qual voa mais longe",
+    "e": "✈️",
+    "s": 3
+   },
+   {
+    "t": "Dizer \"por favor\" e \"obrigad{o|a}\" o dia inteiro",
+    "e": "💛",
+    "s": 4
+   },
+   {
+    "t": "Pedir desculpas ou perdoar alguém de coração",
+    "e": "🫶",
+    "s": 5
+   },
+   {
+    "t": "Escovar os dentes por 2 minutos inteiros",
+    "e": "🪥",
+    "s": 3
+   },
+   {
+    "t": "Separar um brinquedo para doar",
+    "e": "🎁",
+    "s": 5
+   },
+   {
+    "t": "Inventar uma música sobre a família",
+    "e": "🎶",
+    "s": 4
+   },
+   {
+    "t": "Ficar 5 minutos lendo ou olhando um livro em silêncio",
+    "e": "🤫",
+    "s": 4
+   },
+   {
+    "t": "Contar 3 coisas boas que aconteceram hoje",
+    "e": "🌈",
+    "s": 3
+   },
+   {
+    "t": "Comer a salada sem reclamar",
+    "e": "🥗",
+    "s": 4
+   },
+   {
+    "t": "Ajudar a guardar as compras",
+    "e": "🛍️",
+    "s": 4
+   },
+   {
+    "t": "Fazer um desenho para a geladeira",
+    "e": "🏠",
+    "s": 3
+   },
+   {
+    "t": "Brincar ao ar livre por 20 minutos",
+    "e": "⚽",
+    "s": 3
+   },
+   {
+    "t": "Esperar a vez de falar sem interromper",
+    "e": "✋",
+    "s": 5
+   }
+  ],
+  [
+   {
+    "t": "Ler 15 páginas de um livro",
+    "e": "📖",
+    "s": 5
+   },
+   {
+    "t": "Fazer 30 polichinelos",
+    "e": "⭐",
+    "s": 4
+   },
+   {
+    "t": "Elogiar 3 pessoas diferentes hoje",
+    "e": "💬",
+    "s": 5
+   },
+   {
+    "t": "Ajudar a preparar o jantar",
+    "e": "🍳",
+    "s": 5
+   },
+   {
+    "t": "Brincar 15 minutos com alguém mais novo do jeito que ele quiser",
+    "e": "🧸",
+    "s": 6
+   },
+   {
+    "t": "Aprender 5 palavras novas em inglês",
+    "e": "🇬🇧",
+    "s": 5
+   },
+   {
+    "t": "Escrever um bilhete carinhoso para alguém",
+    "e": "✉️",
+    "s": 5
+   },
+   {
+    "t": "Passar o dia inteiro sem reclamar",
+    "e": "😎",
+    "s": 6
+   },
+   {
+    "t": "Arrumar a gaveta ou a mochila por completo",
+    "e": "🎒",
+    "s": 5
+   },
+   {
+    "t": "Desenhar um mapa do tesouro e esconder algo para alguém da família",
+    "e": "🗺️",
+    "s": 5
+   },
+   {
+    "t": "Fazer 1 minuto de prancha",
+    "e": "💪",
+    "s": 4
+   },
+   {
+    "t": "Contar uma piada no jantar",
+    "e": "😂",
+    "s": 3
+   },
+   {
+    "t": "Falar a tabuada do 7 sem errar",
+    "e": "✖️",
+    "s": 5
+   },
+   {
+    "t": "Construir algo criativo com blocos ou papel",
+    "e": "🏗️",
+    "s": 4
+   },
+   {
+    "t": "Ligar ou mandar mensagem para um avô ou avó",
+    "e": "📞",
+    "s": 5
+   },
+   {
+    "t": "Ajudar a lavar a louça",
+    "e": "🍽️",
+    "s": 5
+   },
+   {
+    "t": "Separar um brinquedo para doar",
+    "e": "🎁",
+    "s": 5
+   },
+   {
+    "t": "Desenhar a casa dos sonhos",
+    "e": "🏡",
+    "s": 4
+   },
+   {
+    "t": "Descobrir um fato curioso e contar no jantar",
+    "e": "🦒",
+    "s": 4
+   },
+   {
+    "t": "Responder com educação o dia inteiro",
+    "e": "🙂",
+    "s": 6
+   },
+   {
+    "t": "Ficar 1 hora a mais sem tela",
+    "e": "📵",
+    "s": 6
+   },
+   {
+    "t": "Arrumar o quarto sem ninguém pedir",
+    "e": "🧹",
+    "s": 6
+   },
+   {
+    "t": "Correr, pedalar ou jogar bola por 20 minutos",
+    "e": "⚽",
+    "s": 4
+   },
+   {
+    "t": "Inventar uma brincadeira nova para a família",
+    "e": "🎲",
+    "s": 4
+   },
+   {
+    "t": "Fazer um origami",
+    "e": "🦢",
+    "s": 4
+   },
+   {
+    "t": "Agradecer a professora por alguma coisa",
+    "e": "🍎",
+    "s": 5
+   },
+   {
+    "t": "Escrever 3 coisas pelas quais é grat{o|a}",
+    "e": "📝",
+    "s": 4
+   },
+   {
+    "t": "Ensinar algo novo para alguém mais novo",
+    "e": "🧑‍🏫",
+    "s": 5
+   },
+   {
+    "t": "Regar as plantas da casa",
+    "e": "🌱",
+    "s": 3
+   },
+   {
+    "t": "Ler sozinh{o|a} 20 minutos antes de dormir",
+    "e": "🌙",
+    "s": 5
+   },
+   {
+    "t": "Ajudar a carregar as compras",
+    "e": "🛍️",
+    "s": 4
+   },
+   {
+    "t": "Pedir desculpas ou perdoar alguém de coração",
+    "e": "🤝",
+    "s": 6
+   }
+  ],
+  [
+   {
+    "t": "Ler um capítulo inteiro de um livro",
+    "e": "📚",
+    "s": 6
+   },
+   {
+    "t": "Cozinhar uma receita simples com um adulto",
+    "e": "🍳",
+    "s": 6
+   },
+   {
+    "t": "Fazer 3 séries de 15 agachamentos",
+    "e": "💪",
+    "s": 5
+   },
+   {
+    "t": "Escrever um texto curto sobre o seu dia",
+    "e": "📝",
+    "s": 5
+   },
+   {
+    "t": "Aprender uma frase nova em inglês e usar no jantar",
+    "e": "🇬🇧",
+    "s": 5
+   },
+   {
+    "t": "Organizar o guarda-roupa ou a escrivaninha",
+    "e": "🗄️",
+    "s": 6
+   },
+   {
+    "t": "Ficar 2 horas sem celular ou videogame",
+    "e": "📵",
+    "s": 7
+   },
+   {
+    "t": "Ajudar alguém da família em algo que ele precise",
+    "e": "🤝",
+    "s": 6
+   },
+   {
+    "t": "Mandar uma mensagem de agradecimento para um professor ou treinador",
+    "e": "💌",
+    "s": 5
+   },
+   {
+    "t": "Pesquisar uma curiosidade de ciências e explicar para a família",
+    "e": "🔬",
+    "s": 5
+   },
+   {
+    "t": "Lavar a louça do jantar inteira",
+    "e": "🍽️",
+    "s": 6
+   },
+   {
+    "t": "Fazer a lição sem ninguém precisar lembrar",
+    "e": "✏️",
+    "s": 6
+   },
+   {
+    "t": "Planejar a agenda da semana que vem",
+    "e": "🗓️",
+    "s": 5
+   },
+   {
+    "t": "Elogiar alguém de forma específica e sincera",
+    "e": "💬",
+    "s": 5
+   },
+   {
+    "t": "Ouvir alguém por 10 minutos sem olhar o celular",
+    "e": "👂",
+    "s": 6
+   },
+   {
+    "t": "Passar o dia inteiro sem reclamar nem revirar os olhos",
+    "e": "😎",
+    "s": 7
+   },
+   {
+    "t": "Escrever 5 coisas pelas quais é grat{o|a}",
+    "e": "🙏",
+    "s": 5
+   },
+   {
+    "t": "Separar roupas ou livros para doar",
+    "e": "🎁",
+    "s": 6
+   },
+   {
+    "t": "Ensinar algo que você sabe para alguém da família",
+    "e": "🧑‍🏫",
+    "s": 5
+   },
+   {
+    "t": "Correr ou pedalar por 30 minutos",
+    "e": "🚴",
+    "s": 5
+   },
+   {
+    "t": "Desenhar, pintar ou compor algo do zero",
+    "e": "🎨",
+    "s": 5
+   },
+   {
+    "t": "Resolver uma discussão conversando, sem gritar",
+    "e": "🕊️",
+    "s": 7
+   },
+   {
+    "t": "Preparar o lanche de alguém mais novo",
+    "e": "🥪",
+    "s": 5
+   },
+   {
+    "t": "Ler um salmo ou provérbio e contar o que entendeu",
+    "e": "📜",
+    "s": 5
+   },
+   {
+    "t": "Arrumar o quarto e trocar a roupa de cama",
+    "e": "🛏️",
+    "s": 6
+   },
+   {
+    "t": "Assistir a um documentário curto e comentar no jantar",
+    "e": "🎬",
+    "s": 4
+   },
+   {
+    "t": "Ligar para um avô, avó ou parente que mora longe",
+    "e": "📞",
+    "s": 5
+   },
+   {
+    "t": "Pedir desculpas primeiro, mesmo achando que tem razão",
+    "e": "🫶",
+    "s": 7
+   },
+   {
+    "t": "Dormir no horário combinado sem negociar",
+    "e": "🌙",
+    "s": 5
+   },
+   {
+    "t": "Cuidar de uma planta ou de um animal o dia todo",
+    "e": "🐶",
+    "s": 5
+   }
+  ],
+  [
+   {
+    "t": "Preparar uma refeição para a família",
+    "e": "🍲",
+    "s": 8
+   },
+   {
+    "t": "Ler 30 páginas de um livro",
+    "e": "📚",
+    "s": 6
+   },
+   {
+    "t": "Fazer 30 minutos de atividade física",
+    "e": "🏃",
+    "s": 5
+   },
+   {
+    "t": "Ficar uma tarde inteira longe das redes sociais",
+    "e": "📵",
+    "s": 8
+   },
+   {
+    "t": "Escrever no diário o que sentiu hoje e por quê",
+    "e": "📓",
+    "s": 5
+   },
+   {
+    "t": "Organizar o próprio material e o calendário de provas",
+    "e": "🗓️",
+    "s": 6
+   },
+   {
+    "t": "Ajudar um irmão, primo ou amigo com a lição",
+    "e": "🤝",
+    "s": 7
+   },
+   {
+    "t": "Ter uma conversa de verdade com um adulto da família, sem pressa",
+    "e": "☕",
+    "s": 7
+   },
+   {
+    "t": "Assistir a uma aula ou vídeo em inglês sem legenda",
+    "e": "🇬🇧",
+    "s": 6
+   },
+   {
+    "t": "Fazer uma tarefa da casa que normalmente é de outra pessoa",
+    "e": "🧹",
+    "s": 7
+   },
+   {
+    "t": "Agradecer alguém por escrito, com detalhes",
+    "e": "💌",
+    "s": 5
+   },
+   {
+    "t": "Montar um orçamento do que gostaria de comprar e quanto precisa juntar",
+    "e": "💰",
+    "s": 6
+   },
+   {
+    "t": "Aprender algo novo por 20 minutos, só pelo desafio",
+    "e": "🎯",
+    "s": 6
+   },
+   {
+    "t": "Fazer um elogio sincero a cada pessoa da casa",
+    "e": "💬",
+    "s": 6
+   },
+   {
+    "t": "Ler um capítulo de Provérbios e escolher um versículo para a semana",
+    "e": "📜",
+    "s": 5
+   },
+   {
+    "t": "Ir dormir sem o celular no quarto",
+    "e": "🌙",
+    "s": 7
+   },
+   {
+    "t": "Separar algo de valor para doar e escolher quem vai receber",
+    "e": "🎁",
+    "s": 7
+   },
+   {
+    "t": "Resolver um conflito com calma e ouvir o outro lado primeiro",
+    "e": "🕊️",
+    "s": 8
+   },
+   {
+    "t": "Cozinhar algo novo seguindo uma receita",
+    "e": "🧁",
+    "s": 6
+   },
+   {
+    "t": "Planejar um passeio em família e apresentar a ideia",
+    "e": "🗺️",
+    "s": 6
+   },
+   {
+    "t": "Escrever 3 metas para o próximo mês",
+    "e": "🧭",
+    "s": 5
+   },
+   {
+    "t": "Ensinar uma habilidade para alguém mais novo",
+    "e": "🧑‍🏫",
+    "s": 6
+   },
+   {
+    "t": "Passar o dia sem reclamar nem usar ironia",
+    "e": "😎",
+    "s": 8
+   },
+   {
+    "t": "Visitar ou ligar para alguém que está sozinho",
+    "e": "📞",
+    "s": 7
+   },
+   {
+    "t": "Arrumar o quarto inteiro e o armário",
+    "e": "🛏️",
+    "s": 6
+   },
+   {
+    "t": "Desenhar, escrever, tocar ou criar algo autoral",
+    "e": "🎨",
+    "s": 5
+   },
+   {
+    "t": "Ajudar nas compras e comparar preços",
+    "e": "🛒",
+    "s": 5
+   },
+   {
+    "t": "Fazer um voluntariado simples em casa, na igreja ou na escola",
+    "e": "🙌",
+    "s": 8
+   },
+   {
+    "t": "Pedir perdão de verdade a alguém, sem desculpas",
+    "e": "🫶",
+    "s": 8
+   },
+   {
+    "t": "Contar para a família algo que aprendeu esta semana",
+    "e": "💡",
+    "s": 4
+   }
+  ]
+ ]
+}

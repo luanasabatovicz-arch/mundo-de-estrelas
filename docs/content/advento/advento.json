@@ -1,0 +1,196 @@
+{
+ "doors": [
+  {
+   "t": "Uma promessa de Deus",
+   "ref": "Isaías 9:6",
+   "s": "Muito tempo atrás, Deus fez uma promessa: um dia ia nascer um menino muito especial, que traria paz e alegria para o mundo inteiro. O povo esperou, esperou... e o Natal é a festa dessa promessa cumprida!",
+   "a": "Montem juntos a árvore ou o presépio da casa.",
+   "pts": 5,
+   "emo": "📜"
+  },
+  {
+   "t": "Um anjo visita Maria",
+   "ref": "Lucas 1:26-31",
+   "s": "Numa cidadezinha chamada Nazaré morava uma moça chamada Maria. Um dia, o anjo Gabriel apareceu e disse: \"Não tenha medo! Deus está com você. Você vai ter um bebê, e ele vai se chamar Jesus.\"",
+   "a": "Façam um anjo de papel para pendurar na árvore.",
+   "pts": 5,
+   "emo": "👼"
+  },
+  {
+   "t": "Maria disse sim",
+   "ref": "Lucas 1:38",
+   "s": "Maria ficou surpresa, mas confiou em Deus e respondeu: \"Eu sou serva do Senhor. Que aconteça comigo o que você disse.\" Dizer sim para Deus é um jeito lindo de amar.",
+   "a": "Cada um conta uma vez em que disse \"sim\" para ajudar alguém.",
+   "pts": 5,
+   "emo": "💙"
+  },
+  {
+   "t": "O bebê que pulou de alegria",
+   "ref": "Lucas 1:39-44",
+   "s": "Maria foi visitar a prima Isabel, que também esperava um bebê. Quando Maria chegou, o bebê na barriga de Isabel pulou de alegria! Até ele sabia que Jesus era especial.",
+   "a": "Liguem ou mandem um recado carinhoso para alguém da família.",
+   "pts": 8,
+   "emo": "🤰"
+  },
+  {
+   "t": "José, o noivo bondoso",
+   "ref": "Mateus 1:18-21",
+   "s": "José ia se casar com Maria. Um anjo apareceu num sonho e explicou tudo para ele. José acordou, confiou em Deus e cuidou de Maria com muito amor.",
+   "a": "Façam uma surpresa para um adulto da casa hoje.",
+   "pts": 5,
+   "emo": "🧔"
+  },
+  {
+   "t": "Jesus quer dizer \"Deus salva\"",
+   "ref": "Mateus 1:21",
+   "s": "O anjo disse que o bebê se chamaria Jesus, que quer dizer \"Deus salva\". Cada nome tem um significado, e o nome de Jesus mostra o amor de Deus por nós.",
+   "a": "Descubram juntos o significado do nome de cada um da família.",
+   "pts": 10,
+   "emo": "✨"
+  },
+  {
+   "t": "Deus conosco",
+   "ref": "Mateus 1:23",
+   "s": "Jesus também foi chamado de Emanuel, que quer dizer \"Deus conosco\". No Natal, Deus veio morar pertinho da gente, para nunca mais ficarmos sozinhos.",
+   "a": "Deem um abraço de urso em todo mundo da casa.",
+   "pts": 5,
+   "emo": "🤗"
+  },
+  {
+   "t": "A viagem para Belém",
+   "ref": "Lucas 2:1-4",
+   "s": "O rei mandou todo mundo ir para a cidade da sua família para ser contado. Maria e José arrumaram as coisas e partiram numa longa viagem até Belém.",
+   "a": "Façam uma \"viagem\" pela casa procurando algo para doar.",
+   "pts": 8,
+   "emo": "🫏"
+  },
+  {
+   "t": "Cansados no caminho",
+   "ref": "Lucas 2:4-5",
+   "s": "O caminho era longo, cheio de pedras e morros. Maria estava cansada, e o bebê estava quase nascendo. Mesmo assim, eles confiaram que Deus cuidaria deles.",
+   "a": "Ajudem alguém que está cansado hoje: um adulto da casa ou um amigo.",
+   "pts": 5,
+   "emo": "⛰️"
+  },
+  {
+   "t": "Não tinha lugar",
+   "ref": "Lucas 2:7",
+   "s": "Quando chegaram a Belém, a cidade estava lotada. Bateram de porta em porta, mas não havia lugar para eles em nenhuma hospedaria.",
+   "a": "Pensem em alguém que se sente \"sem lugar\" e convidem para brincar.",
+   "pts": 5,
+   "emo": "🚪"
+  },
+  {
+   "t": "Um lugar simples",
+   "ref": "Lucas 2:7",
+   "s": "Um homem ofereceu um lugar onde ficavam os animais. Era simples, com palha e bichinhos, mas foi ali que Deus escolheu fazer a maior festa da história.",
+   "a": "Arrumem juntos um cantinho da casa para ficar bem bonito.",
+   "pts": 5,
+   "emo": "🐄"
+  },
+  {
+   "t": "Jesus nasceu!",
+   "ref": "Lucas 2:7",
+   "s": "Naquela noite, nasceu o bebê Jesus! Maria o enrolou em panos quentinhos e o deitou com todo carinho. O Rei do mundo chegou pequenininho, como um bebê.",
+   "a": "Vejam fotos de quando vocês eram bebês e contem histórias.",
+   "pts": 12,
+   "emo": "👶"
+  },
+  {
+   "t": "A manjedoura",
+   "ref": "Lucas 2:12",
+   "s": "A caminha de Jesus era uma manjedoura, o lugar onde os animais comiam. Jesus não precisou de um palácio: o que importava era o amor.",
+   "a": "Façam uma caminha de presépio com papel e algodão.",
+   "pts": 5,
+   "emo": "🌾"
+  },
+  {
+   "t": "Os pastores no campo",
+   "ref": "Lucas 2:8",
+   "s": "Perto dali, uns pastores cuidavam das ovelhas durante a noite. Estava escuro e silencioso, e eles nem imaginavam a surpresa que viria.",
+   "a": "Olhem o céu da noite juntos e contem estrelas.",
+   "pts": 5,
+   "emo": "🐑"
+  },
+  {
+   "t": "Uma boa notícia",
+   "ref": "Lucas 2:10-11",
+   "s": "De repente, um anjo brilhante apareceu e disse: \"Não tenham medo! Trago uma notícia de grande alegria: hoje nasceu o Salvador!\" Os pastores ficaram de boca aberta.",
+   "a": "Contem uma boa notícia para alguém hoje.",
+   "pts": 8,
+   "emo": "📣"
+  },
+  {
+   "t": "O coral de anjos",
+   "ref": "Lucas 2:13-14",
+   "s": "Então apareceram muitos anjos cantando: \"Glória a Deus nas alturas, e paz na terra!\" Foi o show mais lindo que já existiu no céu.",
+   "a": "Cantem juntos uma música de Natal (bem alto!).",
+   "pts": 5,
+   "emo": "🎶"
+  },
+  {
+   "t": "Correndo para ver",
+   "ref": "Lucas 2:15-16",
+   "s": "Os pastores disseram: \"Vamos lá ver!\" E correram até Belém. Encontraram Maria, José e o bebê deitado na manjedoura, igualzinho o anjo tinha falado.",
+   "a": "Brinquem de pega-pega ou de corrida no quintal.",
+   "pts": 5,
+   "emo": "🏃"
+  },
+  {
+   "t": "Contando para todo mundo",
+   "ref": "Lucas 2:17-18",
+   "s": "Os pastores ficaram tão felizes que contaram para todo mundo o que tinham visto. Quem ouvia ficava maravilhado com a notícia.",
+   "a": "Façam um cartão de Natal para alguém especial.",
+   "pts": 10,
+   "emo": "💌"
+  },
+  {
+   "t": "Guardado no coração",
+   "ref": "Lucas 2:19",
+   "s": "Maria guardava cada momento no coração e pensava em tudo com carinho. Às vezes as coisas mais bonitas são as que a gente guarda bem lá dentro.",
+   "a": "Cada um conta a lembrança mais feliz deste ano.",
+   "pts": 5,
+   "emo": "💛"
+  },
+  {
+   "t": "A estrela brilhante",
+   "ref": "Mateus 2:1-2",
+   "s": "Longe dali, uns homens sábios viram uma estrela diferente no céu. Eles sabiam que ela anunciava o nascimento de um grande Rei.",
+   "a": "Façam estrelas de papel e enfeitem a janela.",
+   "pts": 5,
+   "emo": "⭐"
+  },
+  {
+   "t": "Seguindo a estrela",
+   "ref": "Mateus 2:9-10",
+   "s": "Os magos viajaram muitos dias seguindo a estrela. Quando ela parou em cima da casa onde Jesus estava, eles ficaram cheios de alegria!",
+   "a": "Escondam uma estrela pela casa e brinquem de caça ao tesouro.",
+   "pts": 8,
+   "emo": "🧭"
+  },
+  {
+   "t": "Presentes para o Rei",
+   "ref": "Mateus 2:11",
+   "s": "Os magos se ajoelharam e deram presentes para Jesus: ouro, incenso e mirra. Eles deram o melhor que tinham para o Rei.",
+   "a": "Escolham juntos um presente ou doação para quem precisa.",
+   "pts": 10,
+   "emo": "🎁"
+  },
+  {
+   "t": "O maior presente",
+   "ref": "João 3:16",
+   "s": "O maior presente de Natal não cabe em caixa nenhuma: é o próprio Jesus. Deus amou tanto o mundo que deu o seu Filho para nós.",
+   "a": "Agradeçam a Deus juntos por três presentes que não são coisas.",
+   "pts": 10,
+   "emo": "🎀"
+  },
+  {
+   "t": "Feliz aniversário, Jesus!",
+   "ref": "Lucas 2:20",
+   "s": "Amanhã é Natal, o aniversário de Jesus! Os pastores voltaram para casa cantando e louvando a Deus. Que a nossa casa também se encha de alegria e amor.",
+   "a": "Cantem \"Parabéns\" para Jesus e façam uma oração de gratidão em família.",
+   "pts": 15,
+   "emo": "🎂"
+  }
+ ]
+}

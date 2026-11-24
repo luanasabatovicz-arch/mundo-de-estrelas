@@ -1,0 +1,30 @@
+{
+  "feelings": [
+    { "id": "bravo", "emo": "😡", "m": "Bravo", "f": "Brava" },
+    { "id": "triste", "emo": "😢", "m": "Triste", "f": "Triste" },
+    { "id": "preocupado", "emo": "😰", "m": "Preocupado", "f": "Preocupada" },
+    { "id": "agitado", "emo": "😣", "m": "Agitado", "f": "Agitada" },
+    { "id": "frustrado", "emo": "😩", "m": "Frustrado", "f": "Frustrada" },
+    { "id": "sozinho", "emo": "🥺", "m": "Sozinho", "f": "Sozinha" }
+  ],
+  "tools": [
+    { "emo": "🔢", "t": "Contar até 10 bem devagar" },
+    { "emo": "🤗", "t": "Me dar um abraço bem apertado" },
+    { "emo": "💧", "t": "Beber um copo de água" },
+    { "emo": "🖍️", "t": "Desenhar ou escrever o que estou sentindo" },
+    { "emo": "🗣️", "t": "Conversar com um adulto de confiança" },
+    { "emo": "🎧", "t": "Ouvir uma música calma" },
+    { "emo": "🚶", "t": "Dar uma volta pela casa ou pelo quintal" },
+    { "emo": "🙏", "t": "Fazer uma oração curtinha" }
+  ],
+  "verses": [
+    "Lancem sobre Deus toda a ansiedade, porque ele cuida de vocês. (1 Pedro 5:7)",
+    "Quando eu tiver medo, confiarei em ti. (Salmo 56:3)",
+    "Venham a mim todos os que estão cansados, e eu darei descanso a vocês. (Mateus 11:28)",
+    "Deixo com vocês a paz; a minha paz dou a vocês. (João 14:27)",
+    "O Senhor está perto dos que têm o coração quebrado. (Salmo 34:18)",
+    "Não tenha medo, porque eu estou com você. (Isaías 41:10)",
+    "Aquietem-se e saibam que eu sou Deus. (Salmo 46:10)",
+    "Fiquem irados, mas não pequem. (Efésios 4:26)"
+  ]
+}
