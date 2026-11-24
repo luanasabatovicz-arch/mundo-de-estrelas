@@ -9,7 +9,7 @@
   "scene": { "w": 1024, "h": 1536 },
   "milestoneFractions": [0.12, 0.3, 0.5, 0.75, 1.0],
   "items": [
-    { "id": "pinheiro", "kind": "daily", "name": "Pinheiro nevado", "emoji": "🌲", "img": "images/pecas/01-pinheiro.png", "slot": { "x": 17, "y": 56, "w": 14 }, "en": { "w": "pine tree", "ex": "The pine tree is green all year." },
+    { "id": "pinheiro", "kind": "daily", "name": "Pinheiro nevado", "emoji": "🌲", "img": "images/pecas/01-pinheiro.png", "slot": { "x": 17, "y": 56, "w": 16 }, "en": { "w": "pine tree", "ex": "The pine tree is green all year." },
       "learn": { "p": "O pinheiro fica verdinho até no frio.", "m": "Os pinheiros têm folhas finas como agulhas, que perdem pouca água. Por isso continuam verdes mesmo no inverno com neve.", "g": "As folhas em agulha e a resina ajudam os pinheiros a sobreviver ao frio e à seca. Na Europa, árvores sempre verdes viraram símbolo de vida no meio do inverno, e daí veio o costume da árvore de Natal." } },
     { "id": "padaria", "kind": "daily", "name": "Padaria da vila", "emoji": "🥖", "img": "images/pecas/02-padaria.png", "slot": { "x": 54, "y": 38, "w": 18 }, "en": { "w": "bakery", "ex": "The bakery smells like fresh bread." },
       "learn": { "p": "Na padaria tem pão quentinho todo dia.", "m": "O fermento é feito de seres vivos minúsculos. Eles soltam bolhinhas de gás que fazem a massa crescer e ficar fofinha.", "g": "O fermento biológico é um fungo que se alimenta do açúcar da farinha e libera gás carbônico. As bolhas ficam presas na rede de glúten, e é isso que dá leveza ao pão." } },
