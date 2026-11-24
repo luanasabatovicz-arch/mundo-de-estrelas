@@ -84,7 +84,7 @@
       "learn": { "p": "A árvore grande acendeu! A vila toda veio ver.", "m": "A estrela no topo da árvore lembra a estrela que guiou os magos até Jesus.", "g": "O costume de enfeitar árvores no Natal se espalhou a partir da Alemanha. As primeiras luzes elétricas de árvore apareceram em 1882, nos Estados Unidos." } },
     { "id": "presepio", "kind": "milestone", "milestone": 4, "name": "Presépio iluminado", "emoji": "🌟", "img": "images/marcos/m4-presepio.png", "slot": { "x": 36, "y": 72, "w": 22 }, "en": { "w": "nativity", "ex": "Baby Jesus is in the nativity scene." },
       "learn": { "p": "No presépio estão Maria, José e o bebê Jesus.", "m": "O presépio conta, com bonequinhos, a noite em que Jesus nasceu em Belém.", "g": "Francisco de Assis montou um presépio vivo em 1223, na Itália, para que as pessoas simples pudessem ver como foi o nascimento de Jesus. A tradição se espalhou pelo mundo." } },
-    { "id": "estrela-belem", "kind": "milestone", "milestone": 5, "name": "Estrela de Belém", "emoji": "⭐", "img": "images/marcos/m5-estrela.png", "slot": { "x": 50, "y": 15, "w": 20 }, "en": { "w": "star", "ex": "The star shines over Bethlehem." },
+    { "id": "estrela-belem", "kind": "milestone", "milestone": 5, "name": "Estrela de Belém", "emoji": "⭐", "img": "images/marcos/m5-estrela.png", "slot": { "x": 50, "y": 15.5, "w": 18 }, "en": { "w": "star", "ex": "The star shines over Bethlehem." },
       "learn": { "p": "A estrela brilhou bem forte em cima da vila!", "m": "Os magos seguiram uma estrela por muitos dias até encontrar Jesus. A vila está completa!", "g": "Astrônomos ainda discutem o que foi a estrela de Belém: um cometa, uma conjunção de planetas ou um sinal único. Para os magos, foi o convite para uma longa viagem de fé." } }
   ]
 }
