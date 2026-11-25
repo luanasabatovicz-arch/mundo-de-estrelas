@@ -9,6 +9,7 @@ export interface Settings {
   perfectBonus: number;      // bônus por rotina completa
   kidMarks: 'pedido' | 'direto'; // no modo criança, marcar tarefa cria pedido ou já vale
   pinHash: string; pinSalt: string;
+  nightStart?: string;       // dia em que a família começou o devocional (senão segue as datas da série)
   modules: Modules;
 }
 export interface SeasonRun { runId: string; seasonId: string; version: number; startDay: string; endDay: string; startedAt: number }

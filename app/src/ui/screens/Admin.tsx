@@ -173,7 +173,17 @@ function RulesAdmin() {
 function ModsAdmin() {
   const s = useApp(); const m = settingsOf(s.family).modules;
   const L: [keyof Modules, string, string][] = [['christian', 'Conteúdo cristão', 'Histórias bíblicas, orações e mensagens de Jesus'], ['advent', 'Calendário do Advento', '1 a 24 de dezembro'], ['english', 'Palavras em inglês', 'Nas peças da temporada'], ['calm', 'Cantinho da calma', 'Respiração guiada'], ['challenges', 'Desafios do dia', 'Um por dia, por idade']];
-  return <div class="card"><h2>Módulos</h2>{L.map(([k, t, d]) => <label class="toggle"><input type="checkbox" checked={m[k]} onChange={e => saveSettings({ modules: { ...m, [k]: (e.target as HTMLInputElement).checked } })} /><span><b>{t}</b><small>{d}</small></span></label>)}</div>;
+  const start = settingsOf(s.family).nightStart;
+  return <div class="card"><h2>Módulos</h2>{L.map(([k, t, d]) => <label class="toggle"><input type="checkbox" checked={m[k]} onChange={e => saveSettings({ modules: { ...m, [k]: (e.target as HTMLInputElement).checked } })} /><span><b>{t}</b><small>{d}</small></span></label>)}
+    {m.christian && <div class="night-start">
+      <h3>Devocional da noite</h3>
+      <p class="muted small">{start ? `Começou em ${fmtDay(start)}: uma história por noite, na ordem.` : 'Segue as datas da série: começa em 1º de dezembro.'}</p>
+      <div class="row gap">
+        {start !== s.today && <button class="btn sm" onClick={() => saveSettings({ nightStart: s.today })}>Começar hoje</button>}
+        {start && <button class="btn sm ghost" onClick={() => saveSettings({ nightStart: null } as any)}>Voltar para 1º de dezembro</button>}
+      </div>
+    </div>}
+  </div>;
 }
 
 /* ---------------------------------------------------------------- temporada */

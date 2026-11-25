@@ -2,7 +2,7 @@ import { useState } from 'preact/hooks';
 import { useApp } from '../../core/store';
 import { liveEntries, routine, settingsOf } from '../../core/rules';
 import { contentUrl, loadMessages, loadNight, loadPrayers, useContent } from '../../core/content';
-import { gx, pickDaily, strHash } from '../../lib/util';
+import { daysBetween, fmtDay, gx, pickDaily, strHash } from '../../lib/util';
 import { Art, Avatar } from '../kit';
 import { levelOf } from '../parts';
 import type { Child, Level, Story } from '../../core/types';
@@ -10,29 +10,41 @@ import type { Child, Level, Story } from '../../core/types';
 const say = (text: string) => { try { speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(text); u.lang = 'pt-BR'; u.rate = 0.95; speechSynthesis.speak(u) } catch { /* */ } };
 const LEVEL_NAME: Record<Level, string> = { p: 'Para os pequenos', m: 'Para os do meio', g: 'Para os maiores' };
 
-export function storyFor(stories: Story[], day: string): { story: Story; preview: boolean } | null {
+export function storyFor(stories: Story[], day: string, start?: string): { story: Story; preview: boolean; idx: number } | null {
   if (!stories.length) return null;
+  // a família escolheu começar num dia: uma história por noite, na ordem, a partir daí
+  if (start) {
+    const i = daysBetween(start, day);
+    if (i < 0) return { story: stories[0], preview: true, idx: 0 };
+    if (i < stories.length) return { story: stories[i], preview: false, idx: i };
+    const r = pickDaily(stories, 'releitura', day)!; return { story: r, preview: false, idx: stories.indexOf(r) };
+  }
   const md = day.slice(5);
-  const exact = stories.find(s => s.date === md);
-  if (exact) return { story: exact, preview: false };
+  const exact = stories.findIndex(s => s.date === md);
+  if (exact >= 0) return { story: stories[exact], preview: false, idx: exact };
   const first = stories[0].date, last = stories[stories.length - 1].date;
   // antes do início da série: prévia da primeira história; depois do fim: releitura sorteada
-  if (md > last && md < first) return md < '07-01' ? { story: pickDaily(stories, 'releitura', day)!, preview: false } : { story: stories[0], preview: true };
-  return { story: pickDaily(stories, 'releitura', day)!, preview: false };
+  if (md > last && md < first && md >= '07-01') return { story: stories[0], preview: true, idx: 0 };
+  const r = pickDaily(stories, 'releitura', day)!; return { story: r, preview: false, idx: stories.indexOf(r) };
 }
 
 export function Night({ only }: { only?: Child }) {
   const s = useApp(); const mods = settingsOf(s.family).modules;
   const night = useContent(loadNight); const msgs = useContent(loadMessages); const prayers = useContent(loadPrayers);
   const kids = only ? [only] : s.children;
-  const found = night ? storyFor(night.stories, s.today) : null;
+  const st = settingsOf(s.family);
+  const today = night ? storyFor(night.stories, s.today, st.nightStart) : null;
+  const [pick, setPick] = useState<number | null>(null);
+  const found = night && today ? (pick == null || pick === today.idx ? today : { story: night.stories[pick], preview: false, idx: pick }) : null;
   const levels = [...new Set(kids.map(levelOf))] as Level[];
   const [part, setPart] = useState(0);
+  const go = (i: number) => { setPick(i); setPart(0) };
   return (
     <div class="page night">
       <header class="night-head"><span class="eyebrow">Hora de dormir</span><h2>{mods.christian ? 'Devocional da noite' : 'Fechamento do dia'}</h2></header>
       {mods.christian && found && <article class="card story">
-        {found.preview && <p class="pill">Prévia · a série começa em 1º de dezembro</p>}
+        {found.preview && <p class="pill">Prévia · a série começa em {st.nightStart ? fmtDay(st.nightStart) : '1º de dezembro'}</p>}
+        {pick != null && pick !== today!.idx && <p class="pill">Outra noite · <button class="link small" onClick={() => go(today!.idx)}>voltar para a de hoje</button></p>}
         <span class="eyebrow">{night!.title} · noite {found.story.n}</span>
         <h3>{found.story.title}</h3><p class="ref">{found.story.ref}</p>
         {found.story.parts.map((t, i) => (i <= part) && (
@@ -49,6 +61,10 @@ export function Night({ only }: { only?: Child }) {
             <div class="prayer"><span class="eyebrow">Oração</span><p>{found.story.prayer}</p></div>
           </>}
         <button class="link small" onClick={() => say([found.story.title, ...found.story.parts.slice(0, part + 1)].join('. '))}>Ouvir em voz alta</button>
+        <div class="row between night-nav">
+          <button class="link small" disabled={found.idx <= 0} onClick={() => go(found.idx - 1)}>‹ Noite anterior</button>
+          <button class="link small" disabled={found.idx >= night!.stories.length - 1} onClick={() => go(found.idx + 1)}>Próxima noite ›</button>
+        </div>
       </article>}
       {msgs && kids.map(c => <ChildNight child={c} msgs={msgs} others={kids} christian={mods.christian} />)}
       {mods.christian && prayers && !only && <ParentPrayer prayers={prayers.parents} names={s.children.map(c => c.name)} day={s.today} />}
