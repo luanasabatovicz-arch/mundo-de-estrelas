@@ -49,6 +49,7 @@ export function Login() {
       </div>
       <p class="login-foot">
         <a href="?demo=1" class="link">Ver demonstração sem conta</a>
+        <span class="credit">Algumas ilustrações: <a href="https://www.vecteezy.com" target="_blank" rel="noopener">Vecteezy.com</a></span>
       </p>
     </div>
   );

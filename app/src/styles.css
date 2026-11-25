@@ -249,3 +249,10 @@ details { border-bottom: 1px solid var(--line) } summary { display: flex; gap: 1
 .clip-pick img { width: 46px; height: 46px; object-fit: contain }
 .clip-pick small { font-size: .65rem; color: var(--muted) }
 .clip-pick span { font-size: 1.4rem; line-height: 46px }
+
+.credit { display: block; margin-top: 10px; font-size: .75rem; opacity: .7 } .credit a { color: inherit }
+.prize-emo .clip { width: 50px; height: 50px }
+
+.prize-emo { width: 56px; flex: none; display: grid; place-items: center }
+.task .task-emo { width: 44px; text-align: center; flex: none }
+.kid .task .task-emo { width: 56px }

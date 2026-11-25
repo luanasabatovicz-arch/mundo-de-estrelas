@@ -2,6 +2,69 @@
  "nota": "Ilustrações das atividades. O app escolhe a ilustração pela primeira palavra-chave que aparece no texto da tarefa (sem acento, minúsculas). 'm' e 'f' são versões de menino e menina.",
  "clips": [
   {
+   "id": "premio-presente",
+   "file": "presente.png",
+   "tags": [
+    "brinquedo ou livro novo",
+    "brinquedo novo",
+    "livro novo",
+    "surpresinha",
+    "adesivo"
+   ]
+  },
+  {
+   "id": "parque",
+   "file": "parque.png",
+   "tags": [
+    "passeio",
+    "parque",
+    "pracinha",
+    "parquinho"
+   ]
+  },
+  {
+   "id": "viagem",
+   "file": "viagem.png",
+   "tags": [
+    "viagem",
+    "carro",
+    "passear de"
+   ]
+  },
+  {
+   "id": "amigos",
+   "file": "turma-danca.png",
+   "tags": [
+    "convidar um amigo",
+    "convidar amigo",
+    "brincadeira nova",
+    "inventar uma brincadeira",
+    "festa"
+   ]
+  },
+  {
+   "id": "instrumento",
+   "file": "trompete.png",
+   "tags": [
+    "instrumento",
+    "tocar",
+    "ensaiar",
+    "flauta",
+    "piano",
+    "violao"
+   ]
+  },
+  {
+   "id": "curiosidade",
+   "file": "girafa.png",
+   "tags": [
+    "bicho novo",
+    "fato curioso",
+    "curiosidade",
+    "descobrir"
+   ]
+  },
+  {
    "id": "briga",
    "file": "briga.png",
    "tags": [
@@ -39,7 +102,7 @@
   {
    "id": "desenhar",
    "m": "desenhar-m.png",
-   "f": "desenhar-f.png",
+   "f": "pintar-f.png",
    "tags": [
     "desenh",
     "pint",

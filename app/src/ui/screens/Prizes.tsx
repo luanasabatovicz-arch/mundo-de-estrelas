@@ -5,6 +5,7 @@ import { redeem, request } from '../../core/actions';
 import { fmtDay } from '../../lib/util';
 import { Bar, Confirm, Star } from '../kit';
 import { ChildTabs } from '../parts';
+import { ItemIcon } from '../clip';
 import type { Child, Item } from '../../core/types';
 
 export function PrizesTab() {
@@ -24,7 +25,7 @@ export function Prizes({ child, kid }: { child: Child; kid?: boolean }) {
       {!rewards.length && <p class="muted">Nenhum prêmio cadastrado ainda.</p>}
       {rewards.map(r => { const can = bal >= r.stars; return (
         <div class={'prize' + (can ? ' can' : '')}>
-          <span class="prize-emo">{r.emoji}</span>
+          <span class="prize-emo"><ItemIcon label={r.label} emoji={r.emoji} clip={r.clip} gender={child.gender} size={50} /></span>
           <div class="grow"><b>{r.label}</b>{!can && <><Bar value={bal} max={r.stars} /><span class="muted small">faltam {r.stars - bal}</span></>}</div>
           {pend.has(r.id) ? <span class="pill">pedido</span> :
             <button class={'btn sm ' + (can ? 'primary' : 'ghost')} disabled={!can} onClick={() => setAsk(r)}><Star n={r.stars} /></button>}
