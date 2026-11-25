@@ -188,15 +188,16 @@ export async function acceptInvite(f: Family) {
 export interface NewFamily { name: string; license: string; kids: { name: string; birth: string; gender: Child['gender']; color: string; band: number }[]; pin: string; modules: Settings['modules']; seasonId: string; startNow: boolean }
 export async function createFamily(nf: NewFamily) {
   const s = getState(); const u = s.user!; const fid = db.newId();
-  let plan: any = { avatar: !!s.demo };
-  if (!s.demo) { try { plan = (await db.get(`licenses/${nf.license}`)).data.plan || { avatar: false } } catch { plan = { avatar: false } } }
+  // o plano vem da licença (as regras conferem); sem plano na licença, a família fica sem o campo
+  let plan: any = s.demo ? { avatar: true } : undefined;
+  if (!s.demo) { try { plan = (await db.get(`licenses/${nf.license}`)).data.plan } catch { plan = undefined } }
   const salt = randomSalt();
   const season = await loadSeason(nf.seasonId);
   const runInfo = makeRun(season, s.today, nf.startNow);
   const settings: Settings = { ...settingsOf(null), pinSalt: nf.pin ? salt : '', pinHash: nf.pin ? await sha256(salt + nf.pin) : '', modules: nf.modules };
   const ops: WriteOp[] = [{
     kind: 'set', path: `families/${fid}`, data: {
-      name: nf.name.trim(), owner: u.uid, license: nf.license || (s.demo ? 'DEMO' : ''), createdAt: Date.now(), plan,
+      name: nf.name.trim(), owner: u.uid, license: nf.license || (s.demo ? 'DEMO' : ''), createdAt: Date.now(), ...(plan ? { plan } : {}),
       members: { [u.uid]: { role: 'owner', email: u.email, name: u.name || u.email } }, memberIds: [u.uid], invites: [], settings, season: runInfo,
     },
   }];
