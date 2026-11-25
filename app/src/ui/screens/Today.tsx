@@ -64,7 +64,7 @@ function Behaviors({ child }: { child: Child }) {
       <h3>Atitudes</h3>
       <div class="chips">{good.map(g => <button class="chip good" onClick={() => logItem(child.id, g)}><ItemIcon label={g.label} emoji={g.emoji} clip={g.clip} gender={child.gender} size={30} /> {gx(g.label, child.gender)} <b>+{g.stars}</b></button>)}</div>
       {bad.length > 0 && <><span class="eyebrow">Combinados não cumpridos</span>
-        <div class="chips">{bad.map(b => <button class="chip bad" onClick={() => logItem(child.id, b)}>{b.emoji} {gx(b.label, child.gender)} <b>−{b.stars}</b></button>)}</div></>}
+        <div class="chips">{bad.map(b => <button class="chip bad" onClick={() => logItem(child.id, b)}><ItemIcon label={b.label} emoji={b.emoji} clip={b.clip} gender={child.gender} size={30} /> {gx(b.label, child.gender)} <b>−{b.stars}</b></button>)}</div></>}
       <div class="row gap wrap">
         <button class="btn sm ghost" onClick={() => setAdj(true)}>Ajuste manual</button>
         {settingsOf(s.family).modules.calm && <button class="btn sm ghost" onClick={() => setUI({ screen: 'calma', screenArg: child.id })}>Cantinho da calma</button>}

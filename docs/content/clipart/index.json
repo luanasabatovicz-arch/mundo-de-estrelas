@@ -2,6 +2,63 @@
  "nota": "Ilustrações das atividades. O app escolhe a ilustração pela primeira palavra-chave que aparece no texto da tarefa (sem acento, minúsculas). 'm' e 'f' são versões de menino e menina.",
  "clips": [
   {
+   "id": "briga",
+   "file": "briga.png",
+   "tags": [
+    "bateu",
+    "bater",
+    "machuc",
+    "briga",
+    "brigou",
+    "empurr"
+   ]
+  },
+  {
+   "id": "birra",
+   "m": "birra-m.png",
+   "f": "birra-f.png",
+   "tags": [
+    "birra",
+    "malcria",
+    "manha",
+    "choro",
+    "chorou"
+   ]
+  },
+  {
+   "id": "gritos",
+   "file": "gritos.png",
+   "tags": [
+    "grit",
+    "palavra feia",
+    "palavras feias",
+    "palavrao",
+    "xing"
+   ]
+  },
+  {
+   "id": "desenhar",
+   "m": "desenhar-m.png",
+   "f": "desenhar-f.png",
+   "tags": [
+    "desenh",
+    "pint",
+    "colorir",
+    "cartao",
+    "arte",
+    "origami"
+   ]
+  },
+  {
+   "id": "dancar",
+   "m": "dancar-m.png",
+   "f": "dancar-f.png",
+   "tags": [
+    "danc",
+    "estatua"
+   ]
+  },
+  {
    "id": "dentes",
    "m": "dentes-m.png",
    "f": "dentes-f.png",
@@ -329,7 +386,6 @@
   },
   {
    "id": "abraco",
-   "file": "abraco.png",
    "tags": [
     "abraco",
     "gentil",
@@ -339,7 +395,9 @@
     "perdo",
     "carinho",
     "elogi"
-   ]
+   ],
+   "m": "abraco-2.png",
+   "f": "abraco-2.png"
   },
   {
    "id": "presente",
