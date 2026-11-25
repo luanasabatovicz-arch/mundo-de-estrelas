@@ -285,8 +285,8 @@ export async function buyAccessory(child: Child, a: { id: string; name: string; 
   return run([entryOp({ child: child.id, kind: 'reward', label: `Avatar: ${a.name}`, emoji: '✨', stars: -a.price }).op, ...starOps(child.id, -a.price, false),
     { kind: 'update', path: P(`children/${child.id}`), data: { 'avatar.owned': db.fv.union(a.id) } }], `${a.name} é seu!`);
 }
-export const wearAccessory = (child: string, slot: string, id: string | null) =>
-  run([{ kind: 'update', path: P(`children/${child}`), data: { [`avatar.worn.${slot}`]: id || db.fv.del() } }]);
+export const toggleToy = (child: string, id: string, hide: boolean) =>
+  run([{ kind: 'update', path: P(`children/${child}`), data: { 'avatar.hidden': hide ? db.fv.union(id) : db.fv.remove(id) } }]);
 
 /** Recorta a transparência, reduz e guarda o avatar no banco (só a família vê). */
 export async function saveAvatar(child: string, file: File, neck: number) {

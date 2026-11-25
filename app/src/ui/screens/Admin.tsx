@@ -2,7 +2,7 @@ import { useState } from 'preact/hooks';
 import { db, getState, selectFamily, setUI, toast, useApp } from '../../core/store';
 import { goalOf, itemsFor, settingsOf, suggestedGoal } from '../../core/rules';
 import {
-  createLicenses, deleteItem, saveAvatar, setAvatarNeck, removeAvatar, setPlanAvatar, endSeason, exportData, invite, isSuperadmin, removeChild, removeMember, renameFamily,
+  createLicenses, deleteItem, saveAvatar, removeAvatar, setPlanAvatar, endSeason, exportData, invite, isSuperadmin, removeChild, removeMember, renameFamily,
   reorderItems, saveChild, saveItem, saveSettings, setGoal, setPin, startSeason, uninvite,
 } from '../../core/actions';
 import { loadSeasonIndex, seasonUrl, useContent } from '../../core/content';
@@ -245,15 +245,14 @@ function PinAdmin({ done }: { done: () => void }) {
 }
 function AvatarAdmin({ child }: { child: Child }) {
   const doc = useDoc(fpath(`avatars/${child.id}`)); const acc = useContent(loadAccessories);
-  const [busy, setBusy] = useState(false); const neck = (doc?.data?.neck as number) || 0.25;
+  const [busy, setBusy] = useState(false);
   return (
     <div class="subcard">
       <b>Avatar</b>
-      <p class="muted small">Imagem de corpo inteiro, em pé, com fundo transparente (PNG). Fica guardada só para a sua família.</p>
-      {doc?.exists && acc && <div class="avatar-admin"><AvatarStage child={child} worn={child.avatar?.worn || {}} accessories={acc.items} /></div>}
-      {doc?.exists && <Field label="Ajuste do pescoço" hint="Mova até os acessórios de cabeça e pescoço ficarem no lugar."><input type="range" min={0.14} max={0.42} step={0.01} value={neck} onChange={e => setAvatarNeck(child.id, Number((e.target as HTMLInputElement).value))} /></Field>}
+      <p class="muted small">Imagem de corpo inteiro, em pé, com fundo transparente (PNG). Fica guardada só para a sua família. Os brinquedos comprados aparecem em volta.</p>
+      {doc?.exists && acc && <div class="avatar-admin"><AvatarStage child={child} toys={(child.avatar?.owned || []).filter(id => !(child.avatar?.hidden || []).includes(id))} accessories={acc.items} /></div>}
       <div class="row gap wrap">
-        <label class="btn sm">{busy ? 'Enviando…' : doc?.exists ? 'Trocar avatar' : 'Enviar avatar'}<input type="file" accept="image/png,image/webp" hidden onChange={async e => { const f = (e.target as HTMLInputElement).files?.[0]; if (!f) return; setBusy(true); await saveAvatar(child.id, f, ageOf(child.birth, getState().today) <= 6 ? 0.29 : 0.22); setBusy(false) }} /></label>
+        <label class="btn sm">{busy ? 'Enviando…' : doc?.exists ? 'Trocar avatar' : 'Enviar avatar'}<input type="file" accept="image/png,image/webp" hidden onChange={async e => { const f = (e.target as HTMLInputElement).files?.[0]; if (!f) return; setBusy(true); await saveAvatar(child.id, f, 0.25); setBusy(false) }} /></label>
         {doc?.exists && <button class="btn sm ghost" onClick={() => removeAvatar(child.id)}>Remover</button>}
       </div>
     </div>

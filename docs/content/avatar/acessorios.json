@@ -1,117 +1,401 @@
 {
- "nota": "Acessórios do avatar (recurso extra). slot: cabeca, laco, pescoco, corpo, peito, pes, lado1 (bichinho, à direita), lado2 (objeto, à esquerda).",
+ "nota": "Brinquedos do avatar (recurso extra). zone: chao ou ceu; size: s, m, l. Os comprados ficam em volta da criança.",
  "items": [
   {
-   "id": "gorro",
-   "name": "Gorro de Natal",
-   "img": "gorro.png",
-   "slot": "cabeca",
-   "price": 40
+   "id": "ursa-rosa",
+   "name": "Ursinha rosa",
+   "img": "ursa-rosa.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 60,
+   "group": "Pelúcias"
   },
   {
-   "id": "tiara",
-   "name": "Tiara de estrelas",
-   "img": "tiara.png",
-   "slot": "cabeca",
-   "price": 60
+   "id": "urso",
+   "name": "Urso marrom",
+   "img": "urso.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 60,
+   "group": "Pelúcias"
   },
   {
-   "id": "laco",
-   "name": "Laço vermelho",
-   "img": "laco.png",
-   "slot": "laco",
-   "price": 25
+   "id": "coelho",
+   "name": "Coelhinho",
+   "img": "coelho.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 60,
+   "group": "Pelúcias"
   },
   {
-   "id": "cachecol-vermelho",
-   "name": "Cachecol vermelho",
-   "img": "cachecol-vermelho.png",
-   "slot": "pescoco",
-   "price": 30
+   "id": "coelha-rosa",
+   "name": "Coelhinha rosa",
+   "img": "coelha-rosa.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 50,
+   "group": "Pelúcias"
   },
   {
-   "id": "cachecol-rosa",
-   "name": "Cachecol rosa",
-   "img": "cachecol-rosa.png",
-   "slot": "pescoco",
-   "price": 30
+   "id": "panda",
+   "name": "Panda",
+   "img": "panda.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 70,
+   "group": "Pelúcias"
   },
   {
-   "id": "casaco-verde",
-   "name": "Casaco verde",
-   "img": "casaco-verde.png",
-   "slot": "corpo",
-   "price": 80
+   "id": "urso-polar",
+   "name": "Urso-polar",
+   "img": "urso-polar.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 70,
+   "group": "Pelúcias"
   },
   {
-   "id": "casaco-rosa",
-   "name": "Casaco rosa",
-   "img": "casaco-rosa.png",
-   "slot": "corpo",
-   "price": 80
+   "id": "unicornio",
+   "name": "Unicórnio",
+   "img": "unicornio.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 90,
+   "group": "Pelúcias"
   },
   {
-   "id": "sueter-rena",
-   "name": "Suéter de rena",
-   "img": "sueter-rena.png",
-   "slot": "corpo",
-   "price": 60
+   "id": "elefante",
+   "name": "Elefantinho",
+   "img": "elefante.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 70,
+   "group": "Pelúcias"
   },
   {
-   "id": "vestido",
-   "name": "Vestido de Natal",
-   "img": "vestido.png",
-   "slot": "corpo",
-   "price": 80
+   "id": "tigre",
+   "name": "Tigrinho",
+   "img": "tigre.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 70,
+   "group": "Pelúcias"
   },
   {
-   "id": "medalha",
-   "name": "Medalha de estrela",
-   "img": "medalha.png",
-   "slot": "peito",
-   "price": 100
+   "id": "macaco",
+   "name": "Macaquinho",
+   "img": "macaco.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 70,
+   "group": "Pelúcias"
   },
   {
-   "id": "botas-marrons",
-   "name": "Botas de neve",
-   "img": "botas-marrons.png",
-   "slot": "pes",
-   "price": 50
+   "id": "coruja",
+   "name": "Coruja",
+   "img": "coruja.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 60,
+   "group": "Pelúcias"
   },
   {
-   "id": "botas-rosa",
-   "name": "Botas brilhantes",
-   "img": "botas-rosa.png",
-   "slot": "pes",
-   "price": 50
+   "id": "polvo",
+   "name": "Polvo",
+   "img": "polvo.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 60,
+   "group": "Pelúcias"
   },
   {
-   "id": "luvas",
-   "name": "Luvas de neve",
-   "img": "luvas.png",
-   "slot": "lado2",
-   "price": 30
+   "id": "jacare",
+   "name": "Jacarezinho",
+   "img": "jacare.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 70,
+   "group": "Pelúcias"
   },
   {
-   "id": "mochila",
-   "name": "Mochila de aventura",
-   "img": "mochila.png",
-   "slot": "lado2",
-   "price": 50
+   "id": "gato-branco",
+   "name": "Gatinho branco",
+   "img": "gato-branco.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 60,
+   "group": "Pelúcias"
+  },
+  {
+   "id": "husky",
+   "name": "Husky",
+   "img": "husky.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 80,
+   "group": "Pelúcias"
+  },
+  {
+   "id": "buldogue",
+   "name": "Buldogue",
+   "img": "buldogue.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 70,
+   "group": "Pelúcias"
+  },
+  {
+   "id": "cervo",
+   "name": "Cervo",
+   "img": "cervo.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 70,
+   "group": "Pelúcias"
+  },
+  {
+   "id": "foca",
+   "name": "Foca",
+   "img": "foca.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 60,
+   "group": "Pelúcias"
+  },
+  {
+   "id": "lontra",
+   "name": "Lontrinha",
+   "img": "lontra.png",
+   "zone": "chao",
+   "size": "s",
+   "price": 50,
+   "group": "Pelúcias"
+  },
+  {
+   "id": "morsa",
+   "name": "Morsa",
+   "img": "morsa.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 60,
+   "group": "Pelúcias"
+  },
+  {
+   "id": "ursinho",
+   "name": "Ursinho",
+   "img": "ursinho.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 60,
+   "group": "Pelúcias"
+  },
+  {
+   "id": "grilo",
+   "name": "Grilo",
+   "img": "grilo.png",
+   "zone": "chao",
+   "size": "s",
+   "price": 40,
+   "group": "Pelúcias"
+  },
+  {
+   "id": "cachorro-bola",
+   "name": "Cachorrinho brincalhão",
+   "img": "cachorro-bola.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 80,
+   "group": "Bichinhos"
+  },
+  {
+   "id": "cachorro-cama",
+   "name": "Cachorrinho na caminha",
+   "img": "cachorro-cama.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 90,
+   "group": "Bichinhos"
   },
   {
    "id": "gatinho",
-   "name": "Gatinho",
+   "name": "Gatinho de cachecol",
    "img": "gatinho.png",
-   "slot": "lado1",
-   "price": 120
+   "zone": "chao",
+   "size": "m",
+   "price": 120,
+   "group": "Bichinhos"
   },
   {
    "id": "cachorrinho",
-   "name": "Cachorrinho",
+   "name": "Cachorrinho de cachecol",
    "img": "cachorrinho.png",
-   "slot": "lado1",
-   "price": 120
+   "zone": "chao",
+   "size": "m",
+   "price": 120,
+   "group": "Bichinhos"
+  },
+  {
+   "id": "cachorro-puxar",
+   "name": "Cachorrinho de puxar",
+   "img": "cachorro-puxar.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 70,
+   "group": "Brinquedos"
+  },
+  {
+   "id": "ganso",
+   "name": "Ganso de argolas",
+   "img": "ganso.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 50,
+   "group": "Brinquedos"
+  },
+  {
+   "id": "boneca",
+   "name": "Boneca bebê",
+   "img": "boneca.png",
+   "zone": "chao",
+   "size": "l",
+   "price": 90,
+   "group": "Brinquedos"
+  },
+  {
+   "id": "spinner",
+   "name": "Spinner",
+   "img": "spinner.png",
+   "zone": "chao",
+   "size": "s",
+   "price": 30,
+   "group": "Brinquedos"
+  },
+  {
+   "id": "dino",
+   "name": "Dinossauro guarda",
+   "img": "dino.png",
+   "zone": "chao",
+   "size": "l",
+   "price": 80,
+   "group": "Brinquedos"
+  },
+  {
+   "id": "bombeiros",
+   "name": "Caminhão de bombeiros",
+   "img": "bombeiros.png",
+   "zone": "chao",
+   "size": "l",
+   "price": 120,
+   "group": "Brinquedos"
+  },
+  {
+   "id": "trator",
+   "name": "Trator",
+   "img": "trator.png",
+   "zone": "chao",
+   "size": "l",
+   "price": 120,
+   "group": "Brinquedos"
+  },
+  {
+   "id": "aviao",
+   "name": "Aviãozinho",
+   "img": "aviao.png",
+   "zone": "ceu",
+   "size": "l",
+   "price": 120,
+   "group": "No céu"
+  },
+  {
+   "id": "pipa",
+   "name": "Pipa",
+   "img": "pipa.png",
+   "zone": "ceu",
+   "size": "l",
+   "price": 60,
+   "group": "No céu"
+  },
+  {
+   "id": "balao",
+   "name": "Balão",
+   "img": "balao.png",
+   "zone": "ceu",
+   "size": "m",
+   "price": 30,
+   "group": "No céu"
+  },
+  {
+   "id": "donut",
+   "name": "Donut colorido",
+   "img": "donut.png",
+   "zone": "chao",
+   "size": "s",
+   "price": 25,
+   "group": "Gostosuras"
+  },
+  {
+   "id": "donut-rosa",
+   "name": "Donut rosa",
+   "img": "donut-rosa.png",
+   "zone": "chao",
+   "size": "s",
+   "price": 25,
+   "group": "Gostosuras"
+  },
+  {
+   "id": "cupcake",
+   "name": "Cupcake",
+   "img": "cupcake.png",
+   "zone": "chao",
+   "size": "s",
+   "price": 30,
+   "group": "Gostosuras"
+  },
+  {
+   "id": "cupcake-coracao",
+   "name": "Cupcake de coração",
+   "img": "cupcake-coracao.png",
+   "zone": "chao",
+   "size": "s",
+   "price": 30,
+   "group": "Gostosuras"
+  },
+  {
+   "id": "sorvete",
+   "name": "Taça de sorvete",
+   "img": "sorvete.png",
+   "zone": "chao",
+   "size": "s",
+   "price": 30,
+   "group": "Gostosuras"
+  },
+  {
+   "id": "pizza",
+   "name": "Pizza",
+   "img": "pizza.png",
+   "zone": "chao",
+   "size": "s",
+   "price": 40,
+   "group": "Gostosuras"
+  },
+  {
+   "id": "hamburguer",
+   "name": "Hambúrguer",
+   "img": "hamburguer.png",
+   "zone": "chao",
+   "size": "s",
+   "price": 40,
+   "group": "Gostosuras"
+  },
+  {
+   "id": "batata",
+   "name": "Batata frita",
+   "img": "batata.png",
+   "zone": "chao",
+   "size": "s",
+   "price": 35,
+   "group": "Gostosuras"
   }
  ]
 }

@@ -21,7 +21,7 @@ export interface Family {
 export interface Child {
   id: string; name: string; birth: string; gender: Gender; color: string; maturity: 1 | 2 | 3;
   english: boolean; photo?: string; balance: number; lifetime: number; order: number;
-  avatar?: { owned?: string[]; worn?: Record<string, string> };
+  avatar?: { owned?: string[]; hidden?: string[] };
 }
 export interface Item {
   id: string; kind: ItemKind; emoji: string; label: string; stars: number;

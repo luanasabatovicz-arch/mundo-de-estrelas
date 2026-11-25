@@ -13,7 +13,7 @@ import type { Child, Item } from '../../core/types';
 export function PrizesTab() {
   const s = useApp();
   const child = s.children.find(c => c.id === s.ui.child) || s.children[0];
-  return <div class="page"><ChildTabs />{child && <>{avatarEnabled(s.family) && <button class="card avatar-link" onClick={() => setUI({ screen: 'avatar', screenArg: child.id })}><span>✨</span><span class="grow"><b>Avatar de {child.name}</b><small class="muted">Acessórios para comprar com estrelas</small></span>›</button>}<Prizes child={child} /><History child={child} /></>}</div>;
+  return <div class="page"><ChildTabs />{child && <>{avatarEnabled(s.family) && <button class="card avatar-link" onClick={() => setUI({ screen: 'avatar', screenArg: child.id })}><span>✨</span><span class="grow"><b>Avatar de {child.name}</b><small class="muted">Brinquedos para comprar com estrelas</small></span>›</button>}<Prizes child={child} /><History child={child} /></>}</div>;
 }
 
 export function Prizes({ child, kid }: { child: Child; kid?: boolean }) {

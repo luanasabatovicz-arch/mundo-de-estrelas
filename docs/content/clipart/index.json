@@ -2,6 +2,26 @@
  "nota": "Ilustrações das atividades. O app escolhe a ilustração pela primeira palavra-chave que aparece no texto da tarefa (sem acento, minúsculas). 'm' e 'f' são versões de menino e menina.",
  "clips": [
   {
+   "id": "sobremesa",
+   "file": "sobremesa.png",
+   "tags": [
+    "sobremesa",
+    "doce",
+    "sorvete",
+    "bolo",
+    "cupcake"
+   ]
+  },
+  {
+   "id": "pizza",
+   "file": "pizza.png",
+   "tags": [
+    "pizza",
+    "lanche especial",
+    "hamburg"
+   ]
+  },
+  {
    "id": "coracao",
    "file": "coracao.png",
    "tags": [
