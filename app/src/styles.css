@@ -230,3 +230,22 @@ details { border-bottom: 1px solid var(--line) } summary { display: flex; gap: 1
 
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important } }
 @media (min-width: 700px) { .collection { grid-template-columns: repeat(8, 1fr) } .album-grid { grid-template-columns: repeat(3, 1fr) } }
+
+/* ---------- ilustrações ---------- */
+.clip { width: 44px; height: 44px; object-fit: contain; flex: none; filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .08)) }
+.task .clip { margin: -4px 0 }
+.task.done .clip { opacity: .55; filter: grayscale(.4) }
+.chip .clip { width: 30px; height: 30px; vertical-align: middle; margin: -6px 2px -6px -6px }
+.chip { display: inline-flex; align-items: center; gap: 4px }
+.challenge-emo .clip { width: 52px; height: 52px }
+.decor { display: block; object-fit: contain; pointer-events: none }
+.hero-decor { width: min(260px, 70vw); margin: 10px auto 0 }
+.empty-decor { width: 110px; margin: 6px auto }
+.daycard-decor { width: 92px; float: right; margin: -6px -4px 0 8px }
+.tile-decor { width: 64px; height: 64px; object-fit: contain }
+.clip-pick { display: grid; grid-template-columns: repeat(auto-fill, minmax(58px, 1fr)); gap: 6px; max-height: 230px; overflow: auto; padding: 4px; border: 1px solid var(--line); border-radius: 12px; background: #fff }
+.clip-pick button { border: 2px solid transparent; background: none; border-radius: 10px; padding: 3px; display: flex; flex-direction: column; align-items: center; min-height: 58px }
+.clip-pick button.on { border-color: var(--secondary); background: color-mix(in srgb, var(--secondary) 8%, #fff) }
+.clip-pick img { width: 46px; height: 46px; object-fit: contain }
+.clip-pick small { font-size: .65rem; color: var(--muted) }
+.clip-pick span { font-size: 1.4rem; line-height: 46px }

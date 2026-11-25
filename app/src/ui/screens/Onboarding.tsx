@@ -4,6 +4,7 @@ import { db, getState, useApp } from '../../core/store';
 import { loadSeasonIndex, seasonUrl, useContent } from '../../core/content';
 import { ageBand, ageOf, fmtDay } from '../../lib/util';
 import { ColorPick, COLORS, Field, PinPad } from '../kit';
+import { Decor } from '../clip';
 import type { Gender } from '../../core/types';
 
 type Kid = NewFamily['kids'][number];
@@ -20,7 +21,7 @@ export function Welcome() {
   if (creating) return <Onboarding onCancel={() => setCreating(false)} />;
   return (
     <div class="page narrow">
-      <header class="welcome-head"><div class="brand-mark">✦</div><h1>Bem-vindos!</h1><p class="muted">{s.user?.email}</p></header>
+      <header class="welcome-head"><Decor name="turma" class="hero-decor" /><h1>Bem-vindos!</h1><p class="muted">{s.user?.email}</p></header>
       {s.invites.map(f => (
         <div class="card">
           <h3>Convite para a família {f.name}</h3>

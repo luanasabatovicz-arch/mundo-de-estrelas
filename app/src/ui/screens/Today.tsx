@@ -4,6 +4,7 @@ import { itemsFor, liveEntries, routine, settingsOf } from '../../core/rules';
 import { adjust, logItem, undoEntry } from '../../core/actions';
 import { gx } from '../../lib/util';
 import { Field, Sheet } from '../kit';
+import { Decor, ItemIcon } from '../clip';
 import { AdventCard, ChallengeCard, ChildTabs, DayCard, Requests } from '../parts';
 import type { Child, Entry, Item, Period } from '../../core/types';
 
@@ -30,7 +31,7 @@ export function Today() {
 export function RoutineList({ child, onTap }: { child: Child; onTap?: (t: Item, done: boolean) => void }) {
   const s = useApp();
   const r = routine(s.family, s.items, s.entries, child.id, s.today);
-  if (!r.tasks.length) return <div class="card"><h3>Rotina</h3><p class="muted">Nenhuma tarefa para {child.name}. Adicione em Responsáveis → Rotina.</p></div>;
+  if (!r.tasks.length) return <div class="card"><h3>Rotina</h3><Decor name="acenando" class="empty-decor" /><p class="muted">Nenhuma tarefa para {child.name}. Adicione em Responsáveis → Rotina.</p></div>;
   const entryOf = (id: string) => liveEntries(s.entries, child.id, s.today).find(e => e.kind === 'task' && e.itemId === id);
   const tap = onTap || ((t: Item, done: boolean) => { if (done) { const e = entryOf(t.id); if (e) undoEntry(e) } else logItem(child.id, t) });
   const pend = new Set(s.requests.filter(q => q.child === child.id && q.kind === 'task').map(q => q.itemId));
@@ -44,7 +45,7 @@ export function RoutineList({ child, onTap }: { child: Child; onTap?: (t: Item, 
           {ts.map(t => { const done = r.done.has(t.id); return (
             <button class={'task' + (done ? ' done' : '') + (pend.has(t.id) ? ' pend' : '')} onClick={() => tap(t, done)} aria-pressed={done}>
               <span class="check" aria-hidden="true">{done ? '✓' : ''}</span>
-              <span class="task-emo">{t.emoji}</span><span class="task-label">{gx(t.label, child.gender)}</span>
+              <ItemIcon label={t.label} emoji={t.emoji} clip={t.clip} gender={child.gender} size={onTap ? 56 : 44} /><span class="task-label">{gx(t.label, child.gender)}</span>
               {pend.has(t.id) && !done ? <span class="pill">pedido</span> : <span class="task-stars">+{t.stars}</span>}
             </button>
           ) })}
@@ -61,7 +62,7 @@ function Behaviors({ child }: { child: Child }) {
   return (
     <div class="card">
       <h3>Atitudes</h3>
-      <div class="chips">{good.map(g => <button class="chip good" onClick={() => logItem(child.id, g)}>{g.emoji} {gx(g.label, child.gender)} <b>+{g.stars}</b></button>)}</div>
+      <div class="chips">{good.map(g => <button class="chip good" onClick={() => logItem(child.id, g)}><ItemIcon label={g.label} emoji={g.emoji} clip={g.clip} gender={child.gender} size={30} /> {gx(g.label, child.gender)} <b>+{g.stars}</b></button>)}</div>
       {bad.length > 0 && <><span class="eyebrow">Combinados não cumpridos</span>
         <div class="chips">{bad.map(b => <button class="chip bad" onClick={() => logItem(child.id, b)}>{b.emoji} {gx(b.label, child.gender)} <b>−{b.stars}</b></button>)}</div></>}
       <div class="row gap wrap">

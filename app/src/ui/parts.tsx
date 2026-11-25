@@ -7,6 +7,7 @@ import { contentUrl, loadAdvent, loadChallenges, seasonUrl, useContent } from '.
 import { gx, pickDaily } from '../lib/util';
 import { Art, Avatar, Bar, Sheet, Star } from './kit';
 import { fpath, useCol, useDoc } from './hooks';
+import { Decor, ItemIcon } from './clip';
 import type { Child } from '../core/types';
 
 export function ChildTabs() {
@@ -42,6 +43,7 @@ export function DayCard({ child, kid }: { child: Child; kid?: boolean }) {
         {w?.next && !w.claimedToday && <Art class="mini" src={seasonUrl(season!.id, w.next.img)} emoji={w.next.emoji} alt={w.next.name} />}
         {w?.claimedToday && <Art class="mini" src={seasonUrl(season!.id, w.claimedToday.img)} emoji={w.claimedToday.emoji} alt={w.claimedToday.name} />}
       </div>
+      {r.allDone && <Decor name="baloes" class="daycard-decor" />}
       {w && season && <>
         <div class="goal-line">
           <span>{w.claimedToday ? <>Peça do dia conquistada: <b>{w.claimedToday.name}</b></> : w.canClaim ? <b>Peça do dia liberada!</b> : r.goalMet ? w.blockedReason : <>Rotina: {r.earned} de {goalStars} estrelas para a <b>peça do dia</b></>}</span>
@@ -145,7 +147,7 @@ export function ChallengeCard({ child, kid }: { child: Child; kid?: boolean }) {
     : simpleEarn(child.id, 'challenge', text, ch.e, ch.s, `Desafio cumprido! +${ch.s}`);
   return (
     <div class={'card challenge' + (done ? ' done' : '')}>
-      <span class="challenge-emo">{ch.e}</span>
+      <span class="challenge-emo"><ItemIcon label={text} emoji={ch.e} gender={child.gender} size={52} /></span>
       <div class="grow"><span class="eyebrow">Desafio do dia · {data.bands[band]}</span><p>{text}</p></div>
       {done ? <span class="pill gold">Feito!</span> : pending ? <span class="pill">Esperando</span> : <button class="btn sm primary" onClick={act}>+{ch.s}</button>}
     </div>

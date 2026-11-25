@@ -134,7 +134,7 @@ export async function openAdventDoor(n: number, pts: number, title: string, emo:
 /* ---------------------------------------------------------------- itens e crianças */
 export async function saveItem(item: Partial<Item> & { kind: Item['kind'] }) {
   const id = item.id || db.newId();
-  const data = { emoji: item.emoji || '⭐', label: item.label || '', stars: Math.max(0, Math.round(item.stars || 0)), kind: item.kind, period: item.period || 'livre', kids: item.kids || [], order: item.order ?? Date.now(), active: item.active !== false };
+  const data = { emoji: item.emoji || '⭐', label: item.label || '', stars: Math.max(0, Math.round(item.stars || 0)), kind: item.kind, period: item.period || 'livre', kids: item.kids || [], order: item.order ?? Date.now(), active: item.active !== false, clip: item.clip || '' };
   return run([{ kind: 'set', path: P(`items/${id}`), data }], 'Salvo');
 }
 export const deleteItem = (id: string) => run([{ kind: 'update', path: P(`items/${id}`), data: { active: false } }], 'Removido');

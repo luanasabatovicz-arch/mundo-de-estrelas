@@ -1,0 +1,397 @@
+{
+ "nota": "Ilustrações das atividades. O app escolhe a ilustração pela primeira palavra-chave que aparece no texto da tarefa (sem acento, minúsculas). 'm' e 'f' são versões de menino e menina.",
+ "clips": [
+  {
+   "id": "dentes",
+   "m": "dentes-m.png",
+   "f": "dentes-f.png",
+   "tags": [
+    "dente",
+    "escovar",
+    "escova"
+   ]
+  },
+  {
+   "id": "acordar",
+   "m": "acordar-m.png",
+   "f": "acordar-f.png",
+   "tags": [
+    "levantar",
+    "acordar",
+    "despertar"
+   ]
+  },
+  {
+   "id": "arrumar-cama",
+   "file": "acordar-m.png",
+   "tags": [
+    "arrumar a cama",
+    "fazer a cama",
+    "forrar"
+   ]
+  },
+  {
+   "id": "dormir",
+   "file": "cama.png",
+   "tags": [
+    "cama no horario",
+    "dormir",
+    "deitar",
+    "soneca"
+   ]
+  },
+  {
+   "id": "vestir",
+   "m": "vestir-m.png",
+   "f": "vestir-f.png",
+   "tags": [
+    "roupa",
+    "vestir",
+    "trocar de roupa",
+    "uniforme"
+   ]
+  },
+  {
+   "id": "fruta",
+   "file": "fruta.png",
+   "tags": [
+    "legume",
+    "fruta",
+    "salada",
+    "verdura",
+    "comida nova",
+    "experimentar"
+   ]
+  },
+  {
+   "id": "cafe",
+   "m": "cafe-m.png",
+   "f": "cafe-f.png",
+   "tags": [
+    "cafe",
+    "almoc",
+    "jantar",
+    "refeic",
+    "comer tudo",
+    "mesa"
+   ]
+  },
+  {
+   "id": "mochila",
+   "file": "mochila.png",
+   "tags": [
+    "mochila",
+    "material",
+    "estojo"
+   ]
+  },
+  {
+   "id": "licao",
+   "file": "licao.png",
+   "tags": [
+    "licao",
+    "dever",
+    "tarefa de casa",
+    "estudar",
+    "revisar",
+    "materia",
+    "prova"
+   ]
+  },
+  {
+   "id": "ler",
+   "file": "ler.png",
+   "tags": [
+    "ler",
+    "livro",
+    "leitura",
+    "historia",
+    "pagina",
+    "capitulo"
+   ]
+  },
+  {
+   "id": "brinquedos",
+   "file": "brinquedos.png",
+   "tags": [
+    "guardar os brinquedos",
+    "guardar brinquedo",
+    "brinquedos"
+   ]
+  },
+  {
+   "id": "blocos",
+   "file": "blocos.png",
+   "tags": [
+    "torre",
+    "bloco",
+    "lego",
+    "montar",
+    "quebra-cabeca"
+   ]
+  },
+  {
+   "id": "varrer",
+   "m": "varrer-m.png",
+   "f": "varrer.png",
+   "tags": [
+    "tarefa da casa",
+    "varrer",
+    "vassoura",
+    "arrumar o quarto",
+    "arrumar quarto",
+    "faxina"
+   ]
+  },
+  {
+   "id": "louca",
+   "file": "louca.png",
+   "tags": [
+    "prato",
+    "louca",
+    "pia",
+    "lavar a louca",
+    "tirar a mesa",
+    "por a mesa",
+    "pôr a mesa"
+   ]
+  },
+  {
+   "id": "lixo",
+   "file": "lixo.png",
+   "tags": [
+    "lixo",
+    "recicl"
+   ]
+  },
+  {
+   "id": "plantas",
+   "file": "plantas.png",
+   "tags": [
+    "planta",
+    "regar",
+    "jardim"
+   ]
+  },
+  {
+   "id": "aspirar",
+   "file": "aspirar.png",
+   "tags": [
+    "aspirar",
+    "aspirador"
+   ]
+  },
+  {
+   "id": "lavar-roupa",
+   "file": "lavar-roupa.png",
+   "tags": [
+    "lavar roupa",
+    "maquina",
+    "roupa suja",
+    "cesto"
+   ]
+  },
+  {
+   "id": "dobrar-roupa",
+   "file": "dobrar-roupa.png",
+   "tags": [
+    "dobrar",
+    "guardar a roupa",
+    "armario",
+    "gaveta"
+   ]
+  },
+  {
+   "id": "janela",
+   "file": "limpar-janela.png",
+   "tags": [
+    "janela",
+    "vidro",
+    "espelho"
+   ]
+  },
+  {
+   "id": "limpar",
+   "file": "passar-pano.png",
+   "tags": [
+    "limpar",
+    "pano",
+    "sujeira",
+    "derrub"
+   ]
+  },
+  {
+   "id": "banho",
+   "file": "banho.png",
+   "tags": [
+    "banho",
+    "chuveiro",
+    "cabelo"
+   ]
+  },
+  {
+   "id": "maos",
+   "m": "maos-m.png",
+   "f": "maos-f.png",
+   "tags": [
+    "mao",
+    "lavar as maos",
+    "higiene"
+   ]
+  },
+  {
+   "id": "sapato",
+   "file": "sapato.png",
+   "tags": [
+    "sapato",
+    "tenis",
+    "cadarco",
+    "sandalia",
+    "meia"
+   ]
+  },
+  {
+   "id": "celular",
+   "file": "celular.png",
+   "tags": [
+    "tela",
+    "celular",
+    "tablet",
+    "video",
+    "ligar",
+    "mensagem",
+    "telefone"
+   ]
+  },
+  {
+   "id": "musica",
+   "file": "musica.png",
+   "tags": [
+    "musica",
+    "cantar",
+    "ouvir"
+   ]
+  },
+  {
+   "id": "pular-corda",
+   "file": "pular-corda.png",
+   "tags": [
+    "ar livre",
+    "brincar la fora",
+    "pular",
+    "corda"
+   ]
+  },
+  {
+   "id": "futebol",
+   "file": "futebol.png",
+   "tags": [
+    "esporte",
+    "bola",
+    "futebol",
+    "correr",
+    "pedalar",
+    "atividade fisica"
+   ]
+  },
+  {
+   "id": "exercicio",
+   "m": "exercicio-m.png",
+   "f": "exercicio-f.png",
+   "tags": [
+    "polichinelo",
+    "agachamento",
+    "prancha",
+    "exercicio",
+    "alongar",
+    "pulos"
+   ]
+  },
+  {
+   "id": "bicho",
+   "file": "bicho.png",
+   "tags": [
+    "bicho",
+    "cachorro",
+    "gato",
+    "animal",
+    "pet"
+   ]
+  },
+  {
+   "id": "escola",
+   "file": "escola.png",
+   "tags": [
+    "escola",
+    "aula",
+    "professor"
+   ]
+  },
+  {
+   "id": "abraco",
+   "file": "abraco.png",
+   "tags": [
+    "abraco",
+    "gentil",
+    "irmao",
+    "amigo",
+    "desculpa",
+    "perdo",
+    "carinho",
+    "elogi"
+   ]
+  },
+  {
+   "id": "presente",
+   "file": "presente.png",
+   "tags": [
+    "dividiu",
+    "dividir",
+    "emprest",
+    "doar",
+    "presente",
+    "repartir"
+   ]
+  },
+  {
+   "id": "ajudar",
+   "file": "dobrar-roupa.png",
+   "tags": [
+    "ajudou",
+    "ajudar",
+    "sem ninguem pedir"
+   ]
+  },
+  {
+   "id": "heroi",
+   "file": "heroi.png",
+   "tags": [
+    "coragem",
+    "corajos",
+    "novo",
+    "verdade"
+   ]
+  },
+  {
+   "id": "obedecer",
+   "file": "acenando.png",
+   "tags": [
+    "obedec",
+    "respeito",
+    "educac",
+    "por favor",
+    "obrigad"
+   ]
+  }
+ ],
+ "decor": {
+  "turma": "turma.png",
+  "acenando": "acenando.png",
+  "baloes": "baloes.png",
+  "oi": "oi.png",
+  "cama": "cama.png",
+  "presente": "presente.png",
+  "musica": "musica.png",
+  "heroi": "heroi.png"
+ }
+}

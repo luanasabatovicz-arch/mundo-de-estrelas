@@ -24,7 +24,7 @@ export interface Child {
 }
 export interface Item {
   id: string; kind: ItemKind; emoji: string; label: string; stars: number;
-  period?: Period; kids: string[]; order: number; active: boolean;
+  period?: Period; kids: string[]; order: number; active: boolean; clip?: string;
 }
 export type EntryKind = 'task' | 'good' | 'bad' | 'reward' | 'bonus' | 'challenge' | 'calm' | 'advent' | 'adjust';
 export interface Entry {

@@ -15,6 +15,7 @@ import { visibleItems, world, routine } from '../../core/rules';
 import { enterKidMode } from './Kid';
 import { ImageCheck, LayoutEditor } from './Tools';
 import { fpath, useCol } from '../hooks';
+import { ClipPicker } from '../clip';
 import type { Child, Item, ItemKind, Modules } from '../../core/types';
 
 type Sec = null | 'kids' | 'task' | 'good' | 'bad' | 'reward' | 'rules' | 'mods' | 'season' | 'family' | 'pin' | 'licenses' | 'images' | 'layout';
@@ -134,6 +135,7 @@ function ItemEdit({ it: it0, onClose }: { it: Partial<Item>; onClose: () => void
     <Sheet title={it0.id ? 'Editar' : 'Novo'} onClose={onClose}>
       <div class="row gap"><EmojiPick value={it.emoji || '⭐'} onChange={emoji => up({ emoji })} />
         <Field label="Texto"><input value={it.label} maxLength={60} onInput={e => up({ label: (e.target as HTMLInputElement).value })} /></Field></div>
+      {(it.kind === 'task' || it.kind === 'good') && <Field label="Ilustração" hint="Automática escolhe pelo texto. Também dá para escolher outra ou usar só o emoji."><ClipPicker value={it.clip || undefined} label={it.label || ''} onChange={clip => up({ clip: clip || '' })} /></Field>}
       <Field label={it.kind === 'reward' ? 'Custa (estrelas)' : 'Estrelas'}><input type="number" inputMode="numeric" min={0} value={it.stars} onInput={e => up({ stars: Number((e.target as HTMLInputElement).value) })} /></Field>
       {it.kind === 'task' && <Field label="Quando"><div class="seg">{PERIODS.map(([p, l]) => <button type="button" class={(it.period || 'livre') === p ? 'on' : ''} onClick={() => up({ period: p })}>{l}</button>)}</div></Field>}
       {s.children.length > 1 && <Field label="Para quem" hint="Nenhuma marcada = todas as crianças."><div class="seg wrap">{s.children.map(c => <button type="button" class={it.kids?.includes(c.id) ? 'on' : ''} onClick={() => toggleKid(c.id)}>{c.name}</button>)}</div></Field>}

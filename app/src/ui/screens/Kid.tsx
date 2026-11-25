@@ -12,6 +12,8 @@ import { Night } from './Night';
 import { Calm } from './Calm';
 import { Album } from './Album';
 import type { Item } from '../../core/types';
+import { Decor } from '../clip';
+import { seasonUrl } from '../../core/content';
 
 export function KidShell() {
   const s = useApp(); const [pin, setPin] = useState(false); const [err, setErr] = useState('');
@@ -20,6 +22,7 @@ export function KidShell() {
   const pinSheet = pin && <Sheet title="Área dos adultos" onClose={() => { setPin(false); setErr('') }}><PinPad title="Digite o PIN" error={err} onDone={exit} /></Sheet>;
   if (!child) return (
     <div class="kid page">
+      <Decor name="turma" class="hero-decor" />
       <h1 class="kid-title">Quem está aí?</h1>
       <div class="kid-pick">{s.children.map(c => <button onClick={() => setUI({ kidId: c.id, screen: null })}><Avatar child={c} size={84} /><span>{c.name}</span></button>)}</div>
       <button class="link" onClick={() => setPin(true)}>Sou adulto</button>
@@ -58,15 +61,15 @@ function KidHome() {
     if (st.kidMarks === 'direto') logItem(child.id, t);
     else request(child.id, 'task', gx(t.label, child.gender), t.emoji, t.stars, t.id);
   };
-  const tiles: [string, string, string, boolean][] = [
-    ['mundo', '🏘️', 'Meu mundo', true], ['premios', '🎁', 'Prêmios', true],
-    ['noite', '🌙', 'Hora de dormir', true], ['calma', '🫧', 'Cantinho da calma', st.modules.calm],
+  const tiles: [string, string, string, boolean, string][] = [
+    ['mundo', '🏘️', 'Meu mundo', true, ''], ['premios', '🎁', 'Prêmios', true, 'presente'],
+    ['noite', '🌙', 'Hora de dormir', true, 'cama'], ['calma', '🫧', 'Cantinho da calma', st.modules.calm, 'musica'],
   ];
   return (
     <>
       <DayCard child={child} kid />
       <AdventCard kid />
-      <div class="tiles">{tiles.filter(t => t[3]).map(([id, e, l]) => <button class="tile" onClick={() => setUI({ screen: id })}><span>{e}</span>{l}</button>)}</div>
+      <div class="tiles">{tiles.filter(t => t[3]).map(([id, e, l, , d]) => <button class="tile" onClick={() => setUI({ screen: id })}>{d ? <Decor name={d} class="tile-decor" /> : s.season ? <img class="tile-decor" src={seasonUrl(s.season.id, 'images/pecas/09-casa-vermelha.png')} alt="" onError={ev => ((ev.target as HTMLElement).replaceWith(e))} /> : <span>{e}</span>}{l}</button>)}</div>
       <RoutineList child={child} onTap={tap} />
       <ChallengeCard child={child} kid />
       {st.kidMarks === 'pedido' && <p class="muted small center">Quando você marca uma tarefa, um adulto confirma.</p>}
