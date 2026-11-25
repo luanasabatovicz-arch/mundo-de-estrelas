@@ -299,6 +299,33 @@
    "group": "Brinquedos"
   },
   {
+   "id": "nave-blocos",
+   "name": "Nave de blocos",
+   "img": "nave-blocos.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 150,
+   "group": "Brinquedos"
+  },
+  {
+   "id": "nave-redonda",
+   "name": "Nave redonda de blocos",
+   "img": "nave-redonda.png",
+   "zone": "chao",
+   "size": "m",
+   "price": 150,
+   "group": "Brinquedos"
+  },
+  {
+   "id": "bonequinho-chef",
+   "name": "Bonequinho cozinheiro",
+   "img": "bonequinho-chef.png",
+   "zone": "chao",
+   "size": "s",
+   "price": 60,
+   "group": "Brinquedos"
+  },
+  {
    "id": "aviao",
    "name": "Aviãozinho",
    "img": "aviao.png",
@@ -323,6 +350,15 @@
    "zone": "ceu",
    "size": "m",
    "price": 30,
+   "group": "No céu"
+  },
+  {
+   "id": "robo-balao",
+   "name": "Robozinho com balão",
+   "img": "robo-balao.png",
+   "zone": "ceu",
+   "size": "l",
+   "price": 90,
    "group": "No céu"
   },
   {
@@ -392,6 +428,42 @@
    "id": "batata",
    "name": "Batata frita",
    "img": "batata.png",
+   "zone": "chao",
+   "size": "s",
+   "price": 35,
+   "group": "Gostosuras"
+  },
+  {
+   "id": "lamen",
+   "name": "Lámen",
+   "img": "lamen.png",
+   "zone": "chao",
+   "size": "s",
+   "price": 40,
+   "group": "Gostosuras"
+  },
+  {
+   "id": "tacos",
+   "name": "Tacos",
+   "img": "tacos.png",
+   "zone": "chao",
+   "size": "s",
+   "price": 40,
+   "group": "Gostosuras"
+  },
+  {
+   "id": "espaguete",
+   "name": "Espaguete",
+   "img": "espaguete.png",
+   "zone": "chao",
+   "size": "s",
+   "price": 40,
+   "group": "Gostosuras"
+  },
+  {
+   "id": "croissant",
+   "name": "Croissants",
+   "img": "croissant.png",
    "zone": "chao",
    "size": "s",
    "price": 35,
