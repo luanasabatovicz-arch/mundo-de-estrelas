@@ -2,6 +2,65 @@
  "nota": "Ilustrações das atividades. O app escolhe a ilustração pela primeira palavra-chave que aparece no texto da tarefa (sem acento, minúsculas). 'm' e 'f' são versões de menino e menina.",
  "clips": [
   {
+   "id": "coracao",
+   "file": "coracao.png",
+   "tags": [
+    "grat",
+    "agradec",
+    "coisas boas",
+    "que ama",
+    "beijo",
+    "amor"
+   ]
+  },
+  {
+   "id": "escrever",
+   "file": "lapis.png",
+   "tags": [
+    "escrev",
+    "diario",
+    "texto",
+    "metas",
+    "tabuada",
+    "agenda",
+    "planejar",
+    "contar ate",
+    "formas",
+    "circulo"
+   ]
+  },
+  {
+   "id": "aprender",
+   "file": "livro.png",
+   "tags": [
+    "ingles",
+    "palavras novas",
+    "aprender",
+    "aprendeu",
+    "ensinar",
+    "pesquisar",
+    "ciencias"
+   ]
+  },
+  {
+   "id": "casa",
+   "file": "casa.png",
+   "tags": [
+    "casa dos sonhos",
+    "coisas vermelhas",
+    "em casa"
+   ]
+  },
+  {
+   "id": "festa",
+   "file": "balao.png",
+   "tags": [
+    "aniversario",
+    "comemorar",
+    "comemoracao"
+   ]
+  },
+  {
    "id": "premio-presente",
    "file": "presente.png",
    "tags": [
@@ -39,7 +98,10 @@
     "convidar amigo",
     "brincadeira nova",
     "inventar uma brincadeira",
-    "festa"
+    "festa",
+    "brincar 10",
+    "do jeito que",
+    "brincar junto"
    ]
   },
   {
@@ -109,7 +171,9 @@
     "colorir",
     "cartao",
     "arte",
-    "origami"
+    "origami",
+    "aviao de papel",
+    "dobradura"
    ]
   },
   {
@@ -193,7 +257,9 @@
     "jantar",
     "refeic",
     "comer tudo",
-    "mesa"
+    "mesa",
+    "cozinh",
+    "receita"
    ]
   },
   {
@@ -227,7 +293,8 @@
     "leitura",
     "historia",
     "pagina",
-    "capitulo"
+    "capitulo",
+    "historinha"
    ]
   },
   {
@@ -318,7 +385,10 @@
     "dobrar",
     "guardar a roupa",
     "armario",
-    "gaveta"
+    "gaveta",
+    "organiz",
+    "guarda-roupa",
+    "escrivaninha"
    ]
   },
   {
@@ -380,7 +450,8 @@
     "video",
     "ligar",
     "mensagem",
-    "telefone"
+    "telefone",
+    "redes"
    ]
   },
   {
