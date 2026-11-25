@@ -188,13 +188,15 @@ export async function acceptInvite(f: Family) {
 export interface NewFamily { name: string; license: string; kids: { name: string; birth: string; gender: Child['gender']; color: string; band: number }[]; pin: string; modules: Settings['modules']; seasonId: string; startNow: boolean }
 export async function createFamily(nf: NewFamily) {
   const s = getState(); const u = s.user!; const fid = db.newId();
+  let plan: any = { avatar: !!s.demo };
+  if (!s.demo) { try { plan = (await db.get(`licenses/${nf.license}`)).data.plan || { avatar: false } } catch { plan = { avatar: false } } }
   const salt = randomSalt();
   const season = await loadSeason(nf.seasonId);
   const runInfo = makeRun(season, s.today, nf.startNow);
   const settings: Settings = { ...settingsOf(null), pinSalt: nf.pin ? salt : '', pinHash: nf.pin ? await sha256(salt + nf.pin) : '', modules: nf.modules };
   const ops: WriteOp[] = [{
     kind: 'set', path: `families/${fid}`, data: {
-      name: nf.name.trim(), owner: u.uid, license: nf.license || (s.demo ? 'DEMO' : ''), createdAt: Date.now(),
+      name: nf.name.trim(), owner: u.uid, license: nf.license || (s.demo ? 'DEMO' : ''), createdAt: Date.now(), plan,
       members: { [u.uid]: { role: 'owner', email: u.email, name: u.name || u.email } }, memberIds: [u.uid], invites: [], settings, season: runInfo,
     },
   }];
@@ -257,13 +259,13 @@ export async function endSeason(thumbs: Record<string, string>) {
 }
 
 /* ---------------------------------------------------------------- superadmin */
-export async function createLicenses(n: number, note: string) {
+export async function createLicenses(n: number, note: string, avatar = false) {
   const codes: string[] = []; const ops: WriteOp[] = [];
   const A = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
   for (let i = 0; i < n; i++) {
     const code = 'MDE-' + Array.from(crypto.getRandomValues(new Uint8Array(8)), b => A[b % A.length]).join('').replace(/(.{4})(.{4})/, '$1-$2');
     codes.push(code);
-    ops.push({ kind: 'set', path: `licenses/${code}`, data: { createdAt: Date.now(), createdBy: getState().user?.email || '', note, usedBy: null } });
+    ops.push({ kind: 'set', path: `licenses/${code}`, data: { createdAt: Date.now(), createdBy: getState().user?.email || '', note, usedBy: null, plan: { avatar } } });
   }
   return (await run(ops, `${n} código(s) criado(s)`)) ? codes : [];
 }
@@ -275,3 +277,32 @@ export function exportData() {
   return JSON.stringify({ exportedAt: new Date().toISOString(), family: s.family, children: s.children.map(c => ({ ...c, photo: c.photo ? '(foto omitida)' : '' })), items: s.items, progress: s.progress, recentEntries: s.entries }, null, 2);
 }
 export const yesterday = () => addDays(getState().today, -1);
+
+/* ---------------------------------------------------------------- avatar (recurso extra) */
+export async function buyAccessory(child: Child, a: { id: string; name: string; price: number }) {
+  if ((child.balance || 0) < a.price) { toast(`Faltam ${a.price - (child.balance || 0)} estrelas`); return false }
+  return run([entryOp({ child: child.id, kind: 'reward', label: `Avatar: ${a.name}`, emoji: '✨', stars: -a.price }).op, ...starOps(child.id, -a.price, false),
+    { kind: 'update', path: P(`children/${child.id}`), data: { 'avatar.owned': db.fv.union(a.id) } }], `${a.name} é seu!`);
+}
+export const wearAccessory = (child: string, slot: string, id: string | null) =>
+  run([{ kind: 'update', path: P(`children/${child}`), data: { [`avatar.worn.${slot}`]: id || db.fv.del() } }]);
+
+/** Recorta a transparência, reduz e guarda o avatar no banco (só a família vê). */
+export async function saveAvatar(child: string, file: File, neck: number) {
+  const img = await new Promise<HTMLImageElement>((res, rej) => { const i = new Image(); const u = URL.createObjectURL(file); i.onload = () => { URL.revokeObjectURL(u); res(i) }; i.onerror = rej; i.src = u });
+  const c0 = document.createElement('canvas'); c0.width = img.naturalWidth; c0.height = img.naturalHeight; const x0 = c0.getContext('2d')!; x0.drawImage(img, 0, 0);
+  const d = x0.getImageData(0, 0, c0.width, c0.height).data; let l = c0.width, r = 0, t = c0.height, b = 0;
+  for (let y = 0; y < c0.height; y++) for (let xx = 0; xx < c0.width; xx++) if (d[(y * c0.width + xx) * 4 + 3] > 40) { if (xx < l) l = xx; if (xx > r) r = xx; if (y < t) t = y; if (y > b) b = y }
+  if (r <= l || b <= t) { toast('A imagem precisa ter fundo transparente', 'error'); return false }
+  let H = 760, data = '';
+  for (let q = 0.86; q >= 0.5; q -= 0.12) {
+    const w = Math.round((r - l + 1) * H / (b - t + 1)); const c = document.createElement('canvas'); c.width = w; c.height = H;
+    c.getContext('2d')!.drawImage(c0, l, t, r - l + 1, b - t + 1, 0, 0, w, H);
+    data = c.toDataURL('image/webp', q); if (!data.startsWith('data:image/webp')) data = c.toDataURL('image/png');
+    if (data.length < 850_000) break; H = Math.round(H * 0.85);
+  }
+  return run([{ kind: 'set', path: P(`avatars/${child}`), data: { img: data, neck, updatedAt: Date.now() } }], 'Avatar salvo');
+}
+export const setAvatarNeck = (child: string, neck: number) => run([{ kind: 'update', path: P(`avatars/${child}`), data: { neck } }]);
+export const removeAvatar = (child: string) => run([{ kind: 'delete', path: P(`avatars/${child}`) }], 'Avatar removido');
+export const setPlanAvatar = (on: boolean) => run([{ kind: 'update', path: `families/${fam().id}`, data: { 'plan.avatar': on } }], on ? 'Avatares liberados para esta família' : 'Avatares desligados');

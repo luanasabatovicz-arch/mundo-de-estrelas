@@ -256,3 +256,22 @@ details { border-bottom: 1px solid var(--line) } summary { display: flex; gap: 1
 .prize-emo { width: 56px; flex: none; display: grid; place-items: center }
 .task .task-emo { width: 44px; text-align: center; flex: none }
 .kid .task .task-emo { width: 56px }
+
+/* ---------- avatar ---------- */
+.avatar-stage { position: relative; width: 100%; max-width: 520px; margin: 0 auto 8px; border-radius: 22px; overflow: hidden; background: radial-gradient(120% 90% at 50% 100%, #fff 0, color-mix(in srgb, var(--sky) 14%, #fff) 70%); min-height: 120px }
+.avatar-stage.loading { aspect-ratio: 1.1 / 1 }
+.av-body { position: absolute; left: 50%; top: 3%; bottom: 3%; transform: translateX(-50%) }
+.av-base { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain }
+.av-acc { position: absolute; height: auto; pointer-events: none; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .12)) }
+.av-acc.preview { animation: pv 1.2s ease-in-out infinite alternate } @keyframes pv { to { opacity: .75 } }
+.av-side { position: absolute; bottom: 3%; height: 30%; width: auto; max-width: 24%; object-fit: contain }
+.av-side.left { left: 4% } .av-side.right { right: 4% }
+.acc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 8px; margin-top: 8px }
+.acc { background: #fff; border: 2px solid var(--line); border-radius: 16px; padding: 8px 6px; display: flex; flex-direction: column; align-items: center; gap: 4px; min-height: 130px }
+.acc img { width: 64px; height: 64px; object-fit: contain }
+.acc-name { font-size: .8rem; font-weight: 700; text-align: center; line-height: 1.2 }
+.acc.has { border-color: color-mix(in srgb, var(--accent) 60%, transparent) } .acc.on { background: color-mix(in srgb, var(--accent) 16%, #fff) } .acc.pv { border-color: var(--secondary) }
+.acc-price.far { opacity: .5 }
+.avatar-link { display: flex; align-items: center; gap: 12px; width: 100%; text-align: left } .avatar-link > span:first-child { font-size: 1.8rem } .avatar-link small { display: block }
+.avatar-admin { max-width: 260px; margin: 6px auto }
+.toggle-row input { width: 22px }

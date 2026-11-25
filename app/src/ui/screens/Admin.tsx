@@ -2,7 +2,7 @@ import { useState } from 'preact/hooks';
 import { db, getState, selectFamily, setUI, toast, useApp } from '../../core/store';
 import { goalOf, itemsFor, settingsOf, suggestedGoal } from '../../core/rules';
 import {
-  createLicenses, deleteItem, endSeason, exportData, invite, isSuperadmin, removeChild, removeMember, renameFamily,
+  createLicenses, deleteItem, saveAvatar, setAvatarNeck, removeAvatar, setPlanAvatar, endSeason, exportData, invite, isSuperadmin, removeChild, removeMember, renameFamily,
   reorderItems, saveChild, saveItem, saveSettings, setGoal, setPin, startSeason, uninvite,
 } from '../../core/actions';
 import { loadSeasonIndex, seasonUrl, useContent } from '../../core/content';
@@ -14,8 +14,9 @@ import { renderThumb } from '../Scene';
 import { visibleItems, world, routine } from '../../core/rules';
 import { enterKidMode } from './Kid';
 import { ImageCheck, LayoutEditor } from './Tools';
-import { fpath, useCol } from '../hooks';
+import { fpath, useCol, useDoc } from '../hooks';
 import { ClipPicker } from '../clip';
+import { AvatarStage, avatarEnabled, loadAccessories } from './AvatarScreen';
 import type { Child, Item, ItemKind, Modules } from '../../core/types';
 
 type Sec = null | 'kids' | 'task' | 'good' | 'bad' | 'reward' | 'rules' | 'mods' | 'season' | 'family' | 'pin' | 'licenses' | 'images' | 'layout';
@@ -52,6 +53,7 @@ export function Admin() {
         {row('family', '👨‍👩‍👧', 'Família e responsáveis', 'Nome, convites para outros adultos')}
         {row('pin', '🔑', 'Trocar PIN', 'Protege esta área e a saída do modo criança')}
         {isSuperadmin() && row('licenses', '🎫', 'Licenças (administração)', 'Criar códigos para novas famílias')}
+        {isSuperadmin() && !s.demo && <label class="menu-row toggle-row"><span class="menu-emo">✨</span><span class="grow"><b>Avatares nesta família</b><small>Recurso extra, pago à parte. Só a administração liga.</small></span><input type="checkbox" checked={avatarEnabled(s.family)} onChange={e => setPlanAvatar((e.target as HTMLInputElement).checked)} /></label>}
       </div>
       <div class="card menu">
         <button class="menu-row" onClick={() => { enterKidMode(); setUI({ adminUntil: 0 }) }}><span class="menu-emo">🧒</span><span class="grow"><b>Modo criança neste aparelho</b><small>As crianças usam sozinhas; para sair, o PIN</small></span></button>
@@ -97,6 +99,7 @@ function ChildEdit({ c: c0, onClose }: { c: Partial<Child>; onClose: () => void 
       <Field label="Desafios" hint="Ajusta a faixa dos desafios em relação à idade."><div class="seg">{([[1, 'mais simples'], [2, 'da idade'], [3, 'mais difíceis']] as const).map(([m, l]) => <button type="button" class={c.maturity === m ? 'on' : ''} onClick={() => up({ maturity: m })}>{l}</button>)}</div></Field>
       <label class="toggle"><input type="checkbox" checked={c.english !== false} onChange={e => up({ english: (e.target as HTMLInputElement).checked })} /><span><b>Mostrar palavras em inglês</b></span></label>
       <Field label="Cor"><ColorPick value={c.color || ''} onChange={color => up({ color })} /></Field>
+      {c0.id && avatarEnabled(s.family) && <AvatarAdmin child={c0 as Child} />}
       <button class="btn primary block" disabled={!c.name?.trim()} onClick={async () => { if (await saveChild(c as any)) onClose() }}>Salvar</button>
       {c0.id && <button class="btn ghost danger-text block" onClick={() => setDel(true)}>Remover criança</button>}
       {del && <Confirm danger text={`Remover ${c0.name}? O histórico fica guardado, mas ela some do app.`} yes="Remover" onClose={() => setDel(false)} onYes={() => { removeChild(c0.id!); onClose() }} />}
@@ -240,8 +243,25 @@ function PinAdmin({ done }: { done: () => void }) {
   return <div class="card">{!p1 ? <PinPad title="Novo PIN" error={err} onDone={p => { setP1(p); setErr('') }} />
     : <PinPad title="Repita o novo PIN" onDone={async p => { if (p === p1) { await setPin(p); toast('PIN alterado'); done() } else { setErr('Os PINs não conferem'); setP1('') } }} />}</div>;
 }
+function AvatarAdmin({ child }: { child: Child }) {
+  const doc = useDoc(fpath(`avatars/${child.id}`)); const acc = useContent(loadAccessories);
+  const [busy, setBusy] = useState(false); const neck = (doc?.data?.neck as number) || 0.25;
+  return (
+    <div class="subcard">
+      <b>Avatar</b>
+      <p class="muted small">Imagem de corpo inteiro, em pé, com fundo transparente (PNG). Fica guardada só para a sua família.</p>
+      {doc?.exists && acc && <div class="avatar-admin"><AvatarStage child={child} worn={child.avatar?.worn || {}} accessories={acc.items} /></div>}
+      {doc?.exists && <Field label="Ajuste do pescoço" hint="Mova até os acessórios de cabeça e pescoço ficarem no lugar."><input type="range" min={0.14} max={0.42} step={0.01} value={neck} onChange={e => setAvatarNeck(child.id, Number((e.target as HTMLInputElement).value))} /></Field>}
+      <div class="row gap wrap">
+        <label class="btn sm">{busy ? 'Enviando…' : doc?.exists ? 'Trocar avatar' : 'Enviar avatar'}<input type="file" accept="image/png,image/webp" hidden onChange={async e => { const f = (e.target as HTMLInputElement).files?.[0]; if (!f) return; setBusy(true); await saveAvatar(child.id, f, ageOf(child.birth, getState().today) <= 6 ? 0.29 : 0.22); setBusy(false) }} /></label>
+        {doc?.exists && <button class="btn sm ghost" onClick={() => removeAvatar(child.id)}>Remover</button>}
+      </div>
+    </div>
+  );
+}
+
 function Licenses() {
-  const [n, setN] = useState(1); const [note, setNote] = useState(''); const [made, setMade] = useState<string[]>([]);
+  const [n, setN] = useState(1); const [note, setNote] = useState(''); const [made, setMade] = useState<string[]>([]); const [av, setAv] = useState(false);
   const col = useCol('licenses');
   const list = (col || []).map(d => ({ id: d.id, ...d.data })).sort((a: any, b: any) => b.createdAt - a.createdAt);
   return (
@@ -250,10 +270,11 @@ function Licenses() {
       <p class="muted small">Cada código cria uma família. Envie o código para quem comprou.</p>
       <div class="row gap"><Field label="Quantidade"><input type="number" min={1} max={50} value={n} onInput={e => setN(Number((e.target as HTMLInputElement).value))} /></Field>
         <Field label="Anotação (ex.: nome da cliente)"><input value={note} maxLength={60} onInput={e => setNote((e.target as HTMLInputElement).value)} /></Field></div>
-      <button class="btn primary block" onClick={async () => setMade(await createLicenses(Math.min(50, Math.max(1, n)), note))}>Criar códigos</button>
+      <label class="toggle"><input type="checkbox" checked={av} onChange={e => setAv((e.target as HTMLInputElement).checked)} /><span><b>Inclui avatares</b><small>Recurso extra, pago à parte</small></span></label>
+      <button class="btn primary block" onClick={async () => setMade(await createLicenses(Math.min(50, Math.max(1, n)), note, av))}>Criar códigos</button>
       {made.length > 0 && <div class="codes"><pre>{made.join('\n')}</pre><button class="btn sm" onClick={() => { navigator.clipboard?.writeText(made.join('\n')); toast('Copiado') }}>Copiar</button></div>}
       <h3>Códigos</h3>
-      {list.map((l: any) => <div class="item-row"><span class="grow"><b class="mono">{l.id}</b><small>{l.note || 'sem anotação'} · {l.usedBy ? 'usado' : 'disponível'}</small></span></div>)}
+      {list.map((l: any) => <div class="item-row"><span class="grow"><b class="mono">{l.id}</b><small>{l.note || 'sem anotação'} · {l.usedBy ? 'usado' : 'disponível'}{l.plan?.avatar ? ' · com avatares' : ''}</small></span></div>)}
       {fpath('') && null}
     </div>
   );

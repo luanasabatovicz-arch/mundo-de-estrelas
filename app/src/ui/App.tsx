@@ -15,6 +15,7 @@ import { KidShell, enterKidMode } from './screens/Kid';
 import { Calm } from './screens/Calm';
 import { Album } from './screens/Album';
 import { AdventScreen } from './parts';
+import { AvatarScreen } from './screens/AvatarScreen';
 
 function Splash({ text }: { text?: string }) {
   return <div class="splash"><div class="brand-mark spin">✦</div><p class="muted">{text || 'Carregando…'}</p></div>;
@@ -71,6 +72,7 @@ function ParentShell() {
           : sub === 'calma' ? <Calm childId={s.ui.screenArg} />
           : sub === 'album' ? <Album childId={s.ui.screenArg} />
           : sub === 'advento' ? <AdventScreen />
+          : sub === 'avatar' && s.children.find(c => c.id === s.ui.screenArg) ? <AvatarScreen child={s.children.find(c => c.id === s.ui.screenArg)!} />
           : s.ui.tab === 'hoje' ? <Today />
           : s.ui.tab === 'mundo' ? <WorldTab />
           : s.ui.tab === 'premios' ? <PrizesTab />

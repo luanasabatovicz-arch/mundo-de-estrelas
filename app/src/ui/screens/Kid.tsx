@@ -11,6 +11,7 @@ import { Prizes } from './Prizes';
 import { Night } from './Night';
 import { Calm } from './Calm';
 import { Album } from './Album';
+import { AvatarScreen, avatarEnabled } from './AvatarScreen';
 import type { Item } from '../../core/types';
 import { Decor } from '../clip';
 import { seasonUrl } from '../../core/content';
@@ -47,6 +48,7 @@ export function KidShell() {
         {sub === 'calma' && <Calm childId={child.id} />}
         {sub === 'advento' && <AdventScreen />}
         {sub === 'album' && <Album childId={child.id} />}
+        {sub === 'avatar' && <AvatarScreen child={child} kid />}
       </main>
       {pinSheet}
     </div>
@@ -63,6 +65,7 @@ function KidHome() {
   };
   const tiles: [string, string, string, boolean, string][] = [
     ['mundo', '🏘️', 'Meu mundo', true, ''], ['premios', '🎁', 'Prêmios', true, 'presente'],
+    ['avatar', '✨', 'Meu avatar', avatarEnabled(s.family), 'heroi'],
     ['noite', '🌙', 'Hora de dormir', true, 'cama'], ['calma', '🫧', 'Cantinho da calma', st.modules.calm, 'musica'],
   ];
   return (

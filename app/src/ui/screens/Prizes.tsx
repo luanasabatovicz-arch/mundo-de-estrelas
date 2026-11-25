@@ -6,12 +6,14 @@ import { fmtDay } from '../../lib/util';
 import { Bar, Confirm, Star } from '../kit';
 import { ChildTabs } from '../parts';
 import { ItemIcon } from '../clip';
+import { avatarEnabled } from './AvatarScreen';
+import { setUI } from '../../core/store';
 import type { Child, Item } from '../../core/types';
 
 export function PrizesTab() {
   const s = useApp();
   const child = s.children.find(c => c.id === s.ui.child) || s.children[0];
-  return <div class="page"><ChildTabs />{child && <><Prizes child={child} /><History child={child} /></>}</div>;
+  return <div class="page"><ChildTabs />{child && <>{avatarEnabled(s.family) && <button class="card avatar-link" onClick={() => setUI({ screen: 'avatar', screenArg: child.id })}><span>✨</span><span class="grow"><b>Avatar de {child.name}</b><small class="muted">Acessórios para comprar com estrelas</small></span>›</button>}<Prizes child={child} /><History child={child} /></>}</div>;
 }
 
 export function Prizes({ child, kid }: { child: Child; kid?: boolean }) {

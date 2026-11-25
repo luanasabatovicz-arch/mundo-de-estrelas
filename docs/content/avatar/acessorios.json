@@ -1,0 +1,117 @@
+{
+ "nota": "Acessórios do avatar (recurso extra). slot: cabeca, laco, pescoco, corpo, peito, pes, lado1 (bichinho, à direita), lado2 (objeto, à esquerda).",
+ "items": [
+  {
+   "id": "gorro",
+   "name": "Gorro de Natal",
+   "img": "gorro.png",
+   "slot": "cabeca",
+   "price": 40
+  },
+  {
+   "id": "tiara",
+   "name": "Tiara de estrelas",
+   "img": "tiara.png",
+   "slot": "cabeca",
+   "price": 60
+  },
+  {
+   "id": "laco",
+   "name": "Laço vermelho",
+   "img": "laco.png",
+   "slot": "laco",
+   "price": 25
+  },
+  {
+   "id": "cachecol-vermelho",
+   "name": "Cachecol vermelho",
+   "img": "cachecol-vermelho.png",
+   "slot": "pescoco",
+   "price": 30
+  },
+  {
+   "id": "cachecol-rosa",
+   "name": "Cachecol rosa",
+   "img": "cachecol-rosa.png",
+   "slot": "pescoco",
+   "price": 30
+  },
+  {
+   "id": "casaco-verde",
+   "name": "Casaco verde",
+   "img": "casaco-verde.png",
+   "slot": "corpo",
+   "price": 80
+  },
+  {
+   "id": "casaco-rosa",
+   "name": "Casaco rosa",
+   "img": "casaco-rosa.png",
+   "slot": "corpo",
+   "price": 80
+  },
+  {
+   "id": "sueter-rena",
+   "name": "Suéter de rena",
+   "img": "sueter-rena.png",
+   "slot": "corpo",
+   "price": 60
+  },
+  {
+   "id": "vestido",
+   "name": "Vestido de Natal",
+   "img": "vestido.png",
+   "slot": "corpo",
+   "price": 80
+  },
+  {
+   "id": "medalha",
+   "name": "Medalha de estrela",
+   "img": "medalha.png",
+   "slot": "peito",
+   "price": 100
+  },
+  {
+   "id": "botas-marrons",
+   "name": "Botas de neve",
+   "img": "botas-marrons.png",
+   "slot": "pes",
+   "price": 50
+  },
+  {
+   "id": "botas-rosa",
+   "name": "Botas brilhantes",
+   "img": "botas-rosa.png",
+   "slot": "pes",
+   "price": 50
+  },
+  {
+   "id": "luvas",
+   "name": "Luvas de neve",
+   "img": "luvas.png",
+   "slot": "lado2",
+   "price": 30
+  },
+  {
+   "id": "mochila",
+   "name": "Mochila de aventura",
+   "img": "mochila.png",
+   "slot": "lado2",
+   "price": 50
+  },
+  {
+   "id": "gatinho",
+   "name": "Gatinho",
+   "img": "gatinho.png",
+   "slot": "lado1",
+   "price": 120
+  },
+  {
+   "id": "cachorrinho",
+   "name": "Cachorrinho",
+   "img": "cachorrinho.png",
+   "slot": "lado1",
+   "price": 120
+  }
+ ]
+}

@@ -59,11 +59,15 @@ service cloud.firestore {
         && request.resource.data.memberIds == [request.auth.uid]
         && get(/databases/$(database)/documents/licenses/$(request.resource.data.license)).data.usedBy == null
         && getAfter(/databases/$(database)/documents/licenses/$(request.resource.data.license)).data.usedBy == request.auth.uid
-        && getAfter(/databases/$(database)/documents/licenses/$(request.resource.data.license)).data.family == fid;
+        && getAfter(/databases/$(database)/documents/licenses/$(request.resource.data.license)).data.family == fid
+        && request.resource.data.get('plan', {}) == get(/databases/$(database)/documents/licenses/$(request.resource.data.license)).data.get('plan', {});
       allow update: if mdeSignedIn() && (
         (request.auth.uid in resource.data.memberIds
           && request.resource.data.owner == resource.data.owner
-          && request.resource.data.license == resource.data.license)
+          && request.resource.data.license == resource.data.license
+          && request.resource.data.get('plan', {}) == resource.data.get('plan', {}))
+        // a administração liga recursos extras (avatares)
+        || mdeSuper()
         // aceitar convite: só entra a própria pessoa, e o convite dela sai da lista
         || (request.auth.token.email_verified == true
           && request.auth.token.email in resource.data.invites

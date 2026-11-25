@@ -16,11 +16,12 @@ export interface Member { role: 'owner' | 'parent'; email: string; name: string 
 export interface Family {
   id: string; name: string; owner: string; license: string; createdAt: number;
   members: Record<string, Member>; memberIds: string[]; invites: string[];
-  settings: Settings; season: SeasonRun | null;
+  settings: Settings; season: SeasonRun | null; plan?: { avatar?: boolean };
 }
 export interface Child {
   id: string; name: string; birth: string; gender: Gender; color: string; maturity: 1 | 2 | 3;
   english: boolean; photo?: string; balance: number; lifetime: number; order: number;
+  avatar?: { owned?: string[]; worn?: Record<string, string> };
 }
 export interface Item {
   id: string; kind: ItemKind; emoji: string; label: string; stars: number;
